@@ -1,0 +1,7 @@
+category: Religion Gnome
+requires: cygwin pygconf2 pygnome2 pygnomecanvas2 pygnomevfs2 pygtk2 pyorbit python
+sdesc: "GNOME genealogical program"
+ldesc: "GRAMPS is a genealogical application, the name being an acronym 
+for Genealogical Research and Analysis Management Programming System. 
+It allows you to store, edit, and research genealogical data, with 
+similar functionality to other genealogical programs."
