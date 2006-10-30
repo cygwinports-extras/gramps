@@ -6,24 +6,24 @@ allows you to store, edit, and research genealogical data, with similar
 functionality to other genealogical programs.
 
 Runtime requirements:
-  cygwin-1.5.19-4
+  cygwin-1.5.21-2
   pygconf2-2.12.2-1
   pygnome2-2.12.2-1
   pygnomecanvas2-2.12.2-1
   pygnomevfs2-2.12.2-1
-  pygobject2-2.10.1-1
+  pygobject2-2.12.2-1
   pygtk2-2.8.6-1
   pyorbit-2.14.0-1
   python-2.4.1-1
 
 Build requirements:
-  cygwin-1.5.19-4
-  autoconf2.5-2.59-3
+  cygwin-1.5.21-2
+  autoconf2.5-2.60-1
   automake1.9-1.9.6-1
-  cygport-0.1.92-1
-  make-3.80-1
+  cygport-0.2.6-1
+  make-3.81-1
   scrollkeeper-0.3.14-2
-  sed-4.1.4-1
+  sed-4.1.5-1
 
 Canonical homepage:
   http://gramps.sourceforge.net/
@@ -48,323 +48,1438 @@ This will create:
 
 Files included in the binary package:
 
-
   /etc/gconf/schemas/gramps.schemas
   /etc/postinstall/gramps.sh
   /etc/preremove/gramps.sh
   /usr/bin/gramps
   /usr/share/application-registry/gramps.applications
   /usr/share/applications/gramps.desktop
-  /usr/share/doc/Cygwin/gramps-2.0.11.README
-  /usr/share/doc/gramps-2.0.11/AUTHORS
-  /usr/share/doc/gramps-2.0.11/COPYING
-  /usr/share/doc/gramps-2.0.11/COPYING-DOCS
-  /usr/share/doc/gramps-2.0.11/ChangeLog
-  /usr/share/doc/gramps-2.0.11/FAQ
-  /usr/share/doc/gramps-2.0.11/INSTALL
-  /usr/share/doc/gramps-2.0.11/NEWS
-  /usr/share/doc/gramps-2.0.11/README
-  /usr/share/doc/gramps-2.0.11/TODO
+  /usr/share/doc/Cygwin/gramps-2.2.1.README
+  /usr/share/doc/gramps-2.2.1/AUTHORS
+  /usr/share/doc/gramps-2.2.1/COPYING
+  /usr/share/doc/gramps-2.2.1/COPYING-DOCS
+  /usr/share/doc/gramps-2.2.1/ChangeLog
+  /usr/share/doc/gramps-2.2.1/FAQ
+  /usr/share/doc/gramps-2.2.1/INSTALL
+  /usr/share/doc/gramps-2.2.1/NEWS
+  /usr/share/doc/gramps-2.2.1/README
+  /usr/share/doc/gramps-2.2.1/TODO
+  /usr/share/gnome/help/gramps/C/figures/bookreport.png
+  /usr/share/gnome/help/gramps/C/figures/cfe-ar.png
+  /usr/share/gnome/help/gramps/C/figures/cfe-df.png
+  /usr/share/gnome/help/gramps/C/figures/child-ref.png
+  /usr/share/gnome/help/gramps/C/figures/column-editor.png
+  /usr/share/gnome/help/gramps/C/figures/comp-people.png
+  /usr/share/gnome/help/gramps/C/figures/date-selection.png
+  /usr/share/gnome/help/gramps/C/figures/edit-ad.png
+  /usr/share/gnome/help/gramps/C/figures/edit-an.png
+  /usr/share/gnome/help/gramps/C/figures/edit-at.png
+  /usr/share/gnome/help/gramps/C/figures/edit-bm.png
+  /usr/share/gnome/help/gramps/C/figures/edit-ev-ref.png
+  /usr/share/gnome/help/gramps/C/figures/edit-ev.png
+  /usr/share/gnome/help/gramps/C/figures/edit-family.png
+  /usr/share/gnome/help/gramps/C/figures/edit-media.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person-addresses.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person-assoc.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person-attributes.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person-events.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person-gallery.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person-internet.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person-lds.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person-names.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person-notes.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person-sources.png
+  /usr/share/gnome/help/gramps/C/figures/edit-person.png
+  /usr/share/gnome/help/gramps/C/figures/edit-plc.png
+  /usr/share/gnome/help/gramps/C/figures/edit-rel.png
+  /usr/share/gnome/help/gramps/C/figures/edit-si.png
+  /usr/share/gnome/help/gramps/C/figures/edit-src.png
+  /usr/share/gnome/help/gramps/C/figures/edit-wi.png
+  /usr/share/gnome/help/gramps/C/figures/events.png
+  /usr/share/gnome/help/gramps/C/figures/export-druid.png
+  /usr/share/gnome/help/gramps/C/figures/family-alt.png
+  /usr/share/gnome/help/gramps/C/figures/family-list.png
+  /usr/share/gnome/help/gramps/C/figures/family-warn.png
+  /usr/share/gnome/help/gramps/C/figures/family.png
+  /usr/share/gnome/help/gramps/C/figures/find-people.png
+  /usr/share/gnome/help/gramps/C/figures/first-open.png
+  /usr/share/gnome/help/gramps/C/figures/gedcom-export-progress.png
+  /usr/share/gnome/help/gramps/C/figures/gedcom-export.png
+  /usr/share/gnome/help/gramps/C/figures/gedcom-import.png
+  /usr/share/gnome/help/gramps/C/figures/mainwin.png
+  /usr/share/gnome/help/gramps/C/figures/media.png
+  /usr/share/gnome/help/gramps/C/figures/merge-people.png
+  /usr/share/gnome/help/gramps/C/figures/merge-plc.png
+  /usr/share/gnome/help/gramps/C/figures/merge-src.png
+  /usr/share/gnome/help/gramps/C/figures/missing-media.png
+  /usr/share/gnome/help/gramps/C/figures/noside-nofilt.png
+  /usr/share/gnome/help/gramps/C/figures/pedigree-anchor.png
+  /usr/share/gnome/help/gramps/C/figures/pedigree-child-cut.png
+  /usr/share/gnome/help/gramps/C/figures/pedigree-siblings-cut.png
+  /usr/share/gnome/help/gramps/C/figures/pedigree.png
+  /usr/share/gnome/help/gramps/C/figures/places.png
+  /usr/share/gnome/help/gramps/C/figures/prefs.png
+  /usr/share/gnome/help/gramps/C/figures/repository.png
+  /usr/share/gnome/help/gramps/C/figures/researcher.png
+  /usr/share/gnome/help/gramps/C/figures/scratch-pad.png
+  /usr/share/gnome/help/gramps/C/figures/select-family.png
+  /usr/share/gnome/help/gramps/C/figures/select-person.png
+  /usr/share/gnome/help/gramps/C/figures/side-filt.png
+  /usr/share/gnome/help/gramps/C/figures/sources.png
+  /usr/share/gnome/help/gramps/C/gramps.xml
+  /usr/share/gnome/help/gramps/fr/figures/bookreport.png
+  /usr/share/gnome/help/gramps/fr/figures/cfe-ar.png
+  /usr/share/gnome/help/gramps/fr/figures/cfe-df.png
+  /usr/share/gnome/help/gramps/fr/figures/child-ref.png
+  /usr/share/gnome/help/gramps/fr/figures/column-editor.png
+  /usr/share/gnome/help/gramps/fr/figures/comp-people.png
+  /usr/share/gnome/help/gramps/fr/figures/date-selection.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-ad.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-an.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-at.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-bm.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-ev-ref.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-ev.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-family.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-media.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person-addresses.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person-assoc.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person-attributes.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person-events.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person-gallery.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person-internet.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person-lds.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person-names.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person-notes.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person-sources.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-person.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-plc.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-rel.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-si.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-src.png
+  /usr/share/gnome/help/gramps/fr/figures/edit-wi.png
+  /usr/share/gnome/help/gramps/fr/figures/events.png
+  /usr/share/gnome/help/gramps/fr/figures/export-druid.png
+  /usr/share/gnome/help/gramps/fr/figures/family-alt.png
+  /usr/share/gnome/help/gramps/fr/figures/family-list.png
+  /usr/share/gnome/help/gramps/fr/figures/family-warn.png
+  /usr/share/gnome/help/gramps/fr/figures/family.png
+  /usr/share/gnome/help/gramps/fr/figures/find-people.png
+  /usr/share/gnome/help/gramps/fr/figures/first-open.png
+  /usr/share/gnome/help/gramps/fr/figures/gedcom-export-progress.png
+  /usr/share/gnome/help/gramps/fr/figures/gedcom-export.png
+  /usr/share/gnome/help/gramps/fr/figures/gedcom-import.png
+  /usr/share/gnome/help/gramps/fr/figures/mainwin.png
+  /usr/share/gnome/help/gramps/fr/figures/media.png
+  /usr/share/gnome/help/gramps/fr/figures/merge-people.png
+  /usr/share/gnome/help/gramps/fr/figures/merge-plc.png
+  /usr/share/gnome/help/gramps/fr/figures/merge-src.png
+  /usr/share/gnome/help/gramps/fr/figures/missing-media.png
+  /usr/share/gnome/help/gramps/fr/figures/noside-nofilt.png
+  /usr/share/gnome/help/gramps/fr/figures/pedigree-anchor.png
+  /usr/share/gnome/help/gramps/fr/figures/pedigree-child-cut.png
+  /usr/share/gnome/help/gramps/fr/figures/pedigree-siblings-cut.png
+  /usr/share/gnome/help/gramps/fr/figures/pedigree.png
+  /usr/share/gnome/help/gramps/fr/figures/places.png
+  /usr/share/gnome/help/gramps/fr/figures/prefs.png
+  /usr/share/gnome/help/gramps/fr/figures/repository.png
+  /usr/share/gnome/help/gramps/fr/figures/researcher.png
+  /usr/share/gnome/help/gramps/fr/figures/scratch-pad.png
+  /usr/share/gnome/help/gramps/fr/figures/select-family.png
+  /usr/share/gnome/help/gramps/fr/figures/select-person.png
+  /usr/share/gnome/help/gramps/fr/figures/side-filt.png
+  /usr/share/gnome/help/gramps/fr/figures/sources.png
+  /usr/share/gnome/help/gramps/fr/gramps.xml
   /usr/share/gramps/AddMedia.py
   /usr/share/gramps/AddMedia.pyc
   /usr/share/gramps/AddMedia.pyo
-  /usr/share/gramps/AddSpouse.py
-  /usr/share/gramps/AddSpouse.pyc
-  /usr/share/gramps/AddSpouse.pyo
-  /usr/share/gramps/AddrEdit.py
-  /usr/share/gramps/AddrEdit.pyc
-  /usr/share/gramps/AddrEdit.pyo
   /usr/share/gramps/ArgHandler.py
   /usr/share/gramps/ArgHandler.pyc
   /usr/share/gramps/ArgHandler.pyo
-  /usr/share/gramps/AttrEdit.py
-  /usr/share/gramps/AttrEdit.pyc
-  /usr/share/gramps/AttrEdit.pyo
+  /usr/share/gramps/Assistant.py
+  /usr/share/gramps/Assistant.pyc
+  /usr/share/gramps/Assistant.pyo
   /usr/share/gramps/AutoComp.py
   /usr/share/gramps/AutoComp.pyc
   /usr/share/gramps/AutoComp.pyo
   /usr/share/gramps/BaseDoc.py
   /usr/share/gramps/BaseDoc.pyc
   /usr/share/gramps/BaseDoc.pyo
+  /usr/share/gramps/BasicUtils.py
+  /usr/share/gramps/BasicUtils.pyc
+  /usr/share/gramps/BasicUtils.pyo
   /usr/share/gramps/Bookmarks.py
   /usr/share/gramps/Bookmarks.pyc
   /usr/share/gramps/Bookmarks.pyo
-  /usr/share/gramps/CalSdn.py
-  /usr/share/gramps/CalSdn.pyc
-  /usr/share/gramps/CalSdn.pyo
-  /usr/share/gramps/ChooseParents.py
-  /usr/share/gramps/ChooseParents.pyc
-  /usr/share/gramps/ChooseParents.pyo
+  /usr/share/gramps/COPYING
   /usr/share/gramps/ColumnOrder.py
   /usr/share/gramps/ColumnOrder.pyc
   /usr/share/gramps/ColumnOrder.pyo
+  /usr/share/gramps/Config/_GrampsConfigKeys.py
+  /usr/share/gramps/Config/_GrampsConfigKeys.pyc
+  /usr/share/gramps/Config/_GrampsConfigKeys.pyo
+  /usr/share/gramps/Config/_GrampsGconfKeys.py
+  /usr/share/gramps/Config/_GrampsGconfKeys.pyc
+  /usr/share/gramps/Config/_GrampsGconfKeys.pyo
+  /usr/share/gramps/Config/_GrampsIniKeys.py
+  /usr/share/gramps/Config/_GrampsIniKeys.pyc
+  /usr/share/gramps/Config/_GrampsIniKeys.pyo
+  /usr/share/gramps/Config/__init__.py
+  /usr/share/gramps/Config/__init__.pyc
+  /usr/share/gramps/Config/__init__.pyo
+  /usr/share/gramps/DataViews/_EventView.py
+  /usr/share/gramps/DataViews/_EventView.pyc
+  /usr/share/gramps/DataViews/_EventView.pyo
+  /usr/share/gramps/DataViews/_FamilyList.py
+  /usr/share/gramps/DataViews/_FamilyList.pyc
+  /usr/share/gramps/DataViews/_FamilyList.pyo
+  /usr/share/gramps/DataViews/_MapView.py
+  /usr/share/gramps/DataViews/_MapView.pyc
+  /usr/share/gramps/DataViews/_MapView.pyo
+  /usr/share/gramps/DataViews/_MediaView.py
+  /usr/share/gramps/DataViews/_MediaView.pyc
+  /usr/share/gramps/DataViews/_MediaView.pyo
+  /usr/share/gramps/DataViews/_PedigreeView.py
+  /usr/share/gramps/DataViews/_PedigreeView.pyc
+  /usr/share/gramps/DataViews/_PedigreeView.pyo
+  /usr/share/gramps/DataViews/_PersonView.py
+  /usr/share/gramps/DataViews/_PersonView.pyc
+  /usr/share/gramps/DataViews/_PersonView.pyo
+  /usr/share/gramps/DataViews/_PlaceView.py
+  /usr/share/gramps/DataViews/_PlaceView.pyc
+  /usr/share/gramps/DataViews/_PlaceView.pyo
+  /usr/share/gramps/DataViews/_RelationView.py
+  /usr/share/gramps/DataViews/_RelationView.pyc
+  /usr/share/gramps/DataViews/_RelationView.pyo
+  /usr/share/gramps/DataViews/_RepositoryView.py
+  /usr/share/gramps/DataViews/_RepositoryView.pyc
+  /usr/share/gramps/DataViews/_RepositoryView.pyo
+  /usr/share/gramps/DataViews/_SourceView.py
+  /usr/share/gramps/DataViews/_SourceView.pyc
+  /usr/share/gramps/DataViews/_SourceView.pyo
+  /usr/share/gramps/DataViews/__init__.py
+  /usr/share/gramps/DataViews/__init__.pyc
+  /usr/share/gramps/DataViews/__init__.pyo
   /usr/share/gramps/Date.py
   /usr/share/gramps/Date.pyc
   /usr/share/gramps/Date.pyo
-  /usr/share/gramps/DateDisplay.py
-  /usr/share/gramps/DateDisplay.pyc
-  /usr/share/gramps/DateDisplay.pyo
   /usr/share/gramps/DateEdit.py
   /usr/share/gramps/DateEdit.pyc
   /usr/share/gramps/DateEdit.pyo
-  /usr/share/gramps/DateHandler.py
-  /usr/share/gramps/DateHandler.pyc
-  /usr/share/gramps/DateHandler.pyo
-  /usr/share/gramps/DateParser.py
-  /usr/share/gramps/DateParser.pyc
-  /usr/share/gramps/DateParser.pyo
-  /usr/share/gramps/DbPrompter.py
-  /usr/share/gramps/DbPrompter.pyc
-  /usr/share/gramps/DbPrompter.pyo
+  /usr/share/gramps/DateHandler/_DateDisplay.py
+  /usr/share/gramps/DateHandler/_DateDisplay.pyc
+  /usr/share/gramps/DateHandler/_DateDisplay.pyo
+  /usr/share/gramps/DateHandler/_DateHandler.py
+  /usr/share/gramps/DateHandler/_DateHandler.pyc
+  /usr/share/gramps/DateHandler/_DateHandler.pyo
+  /usr/share/gramps/DateHandler/_DateParser.py
+  /usr/share/gramps/DateHandler/_DateParser.pyc
+  /usr/share/gramps/DateHandler/_DateParser.pyo
+  /usr/share/gramps/DateHandler/_DateUtils.py
+  /usr/share/gramps/DateHandler/_DateUtils.pyc
+  /usr/share/gramps/DateHandler/_DateUtils.pyo
+  /usr/share/gramps/DateHandler/_Date_de.py
+  /usr/share/gramps/DateHandler/_Date_de.pyc
+  /usr/share/gramps/DateHandler/_Date_de.pyo
+  /usr/share/gramps/DateHandler/_Date_es.py
+  /usr/share/gramps/DateHandler/_Date_es.pyc
+  /usr/share/gramps/DateHandler/_Date_es.pyo
+  /usr/share/gramps/DateHandler/_Date_fi.py
+  /usr/share/gramps/DateHandler/_Date_fi.pyc
+  /usr/share/gramps/DateHandler/_Date_fi.pyo
+  /usr/share/gramps/DateHandler/_Date_fr.py
+  /usr/share/gramps/DateHandler/_Date_fr.pyc
+  /usr/share/gramps/DateHandler/_Date_fr.pyo
+  /usr/share/gramps/DateHandler/_Date_lt.py
+  /usr/share/gramps/DateHandler/_Date_lt.pyc
+  /usr/share/gramps/DateHandler/_Date_lt.pyo
+  /usr/share/gramps/DateHandler/_Date_nl.py
+  /usr/share/gramps/DateHandler/_Date_nl.pyc
+  /usr/share/gramps/DateHandler/_Date_nl.pyo
+  /usr/share/gramps/DateHandler/_Date_ru.py
+  /usr/share/gramps/DateHandler/_Date_ru.pyc
+  /usr/share/gramps/DateHandler/_Date_ru.pyo
+  /usr/share/gramps/DateHandler/_Date_sk.py
+  /usr/share/gramps/DateHandler/_Date_sk.pyc
+  /usr/share/gramps/DateHandler/_Date_sk.pyo
+  /usr/share/gramps/DateHandler/_Date_sv.py
+  /usr/share/gramps/DateHandler/_Date_sv.pyc
+  /usr/share/gramps/DateHandler/_Date_sv.pyo
+  /usr/share/gramps/DateHandler/__init__.py
+  /usr/share/gramps/DateHandler/__init__.pyc
+  /usr/share/gramps/DateHandler/__init__.pyo
+  /usr/share/gramps/DbLoader.py
+  /usr/share/gramps/DbLoader.pyc
+  /usr/share/gramps/DbLoader.pyo
   /usr/share/gramps/DdTargets.py
   /usr/share/gramps/DdTargets.pyc
   /usr/share/gramps/DdTargets.pyo
-  /usr/share/gramps/DisplayModels.py
-  /usr/share/gramps/DisplayModels.pyc
-  /usr/share/gramps/DisplayModels.pyo
-  /usr/share/gramps/DisplayTrace.py
-  /usr/share/gramps/DisplayTrace.pyc
-  /usr/share/gramps/DisplayTrace.pyo
-  /usr/share/gramps/EditPerson.py
-  /usr/share/gramps/EditPerson.pyc
-  /usr/share/gramps/EditPerson.pyo
-  /usr/share/gramps/EditPlace.py
-  /usr/share/gramps/EditPlace.pyc
-  /usr/share/gramps/EditPlace.pyo
-  /usr/share/gramps/EditSource.py
-  /usr/share/gramps/EditSource.pyc
-  /usr/share/gramps/EditSource.pyo
+  /usr/share/gramps/DisplayModels/_BaseModel.py
+  /usr/share/gramps/DisplayModels/_BaseModel.pyc
+  /usr/share/gramps/DisplayModels/_BaseModel.pyo
+  /usr/share/gramps/DisplayModels/_EventModel.py
+  /usr/share/gramps/DisplayModels/_EventModel.pyc
+  /usr/share/gramps/DisplayModels/_EventModel.pyo
+  /usr/share/gramps/DisplayModels/_FamilyModel.py
+  /usr/share/gramps/DisplayModels/_FamilyModel.pyc
+  /usr/share/gramps/DisplayModels/_FamilyModel.pyo
+  /usr/share/gramps/DisplayModels/_MediaModel.py
+  /usr/share/gramps/DisplayModels/_MediaModel.pyc
+  /usr/share/gramps/DisplayModels/_MediaModel.pyo
+  /usr/share/gramps/DisplayModels/_PeopleModel.py
+  /usr/share/gramps/DisplayModels/_PeopleModel.pyc
+  /usr/share/gramps/DisplayModels/_PeopleModel.pyo
+  /usr/share/gramps/DisplayModels/_PlaceModel.py
+  /usr/share/gramps/DisplayModels/_PlaceModel.pyc
+  /usr/share/gramps/DisplayModels/_PlaceModel.pyo
+  /usr/share/gramps/DisplayModels/_RepositoryModel.py
+  /usr/share/gramps/DisplayModels/_RepositoryModel.pyc
+  /usr/share/gramps/DisplayModels/_RepositoryModel.pyo
+  /usr/share/gramps/DisplayModels/_SourceModel.py
+  /usr/share/gramps/DisplayModels/_SourceModel.pyc
+  /usr/share/gramps/DisplayModels/_SourceModel.pyo
+  /usr/share/gramps/DisplayModels/__init__.py
+  /usr/share/gramps/DisplayModels/__init__.pyc
+  /usr/share/gramps/DisplayModels/__init__.pyo
+  /usr/share/gramps/DisplayState.py
+  /usr/share/gramps/DisplayState.pyc
+  /usr/share/gramps/DisplayState.pyo
+  /usr/share/gramps/DisplayTabs/_AddrEmbedList.py
+  /usr/share/gramps/DisplayTabs/_AddrEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_AddrEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_AddressModel.py
+  /usr/share/gramps/DisplayTabs/_AddressModel.pyc
+  /usr/share/gramps/DisplayTabs/_AddressModel.pyo
+  /usr/share/gramps/DisplayTabs/_AttrEmbedList.py
+  /usr/share/gramps/DisplayTabs/_AttrEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_AttrEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_AttrModel.py
+  /usr/share/gramps/DisplayTabs/_AttrModel.pyc
+  /usr/share/gramps/DisplayTabs/_AttrModel.pyo
+  /usr/share/gramps/DisplayTabs/_BackRefList.py
+  /usr/share/gramps/DisplayTabs/_BackRefList.pyc
+  /usr/share/gramps/DisplayTabs/_BackRefList.pyo
+  /usr/share/gramps/DisplayTabs/_BackRefModel.py
+  /usr/share/gramps/DisplayTabs/_BackRefModel.pyc
+  /usr/share/gramps/DisplayTabs/_BackRefModel.pyo
+  /usr/share/gramps/DisplayTabs/_ButtonTab.py
+  /usr/share/gramps/DisplayTabs/_ButtonTab.pyc
+  /usr/share/gramps/DisplayTabs/_ButtonTab.pyo
+  /usr/share/gramps/DisplayTabs/_ChildModel.py
+  /usr/share/gramps/DisplayTabs/_ChildModel.pyc
+  /usr/share/gramps/DisplayTabs/_ChildModel.pyo
+  /usr/share/gramps/DisplayTabs/_DataEmbedList.py
+  /usr/share/gramps/DisplayTabs/_DataEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_DataEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_DataModel.py
+  /usr/share/gramps/DisplayTabs/_DataModel.pyc
+  /usr/share/gramps/DisplayTabs/_DataModel.pyo
+  /usr/share/gramps/DisplayTabs/_EmbeddedList.py
+  /usr/share/gramps/DisplayTabs/_EmbeddedList.pyc
+  /usr/share/gramps/DisplayTabs/_EmbeddedList.pyo
+  /usr/share/gramps/DisplayTabs/_EventBackRefList.py
+  /usr/share/gramps/DisplayTabs/_EventBackRefList.pyc
+  /usr/share/gramps/DisplayTabs/_EventBackRefList.pyo
+  /usr/share/gramps/DisplayTabs/_EventEmbedList.py
+  /usr/share/gramps/DisplayTabs/_EventEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_EventEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_EventRefModel.py
+  /usr/share/gramps/DisplayTabs/_EventRefModel.pyc
+  /usr/share/gramps/DisplayTabs/_EventRefModel.pyo
+  /usr/share/gramps/DisplayTabs/_FamilyAttrEmbedList.py
+  /usr/share/gramps/DisplayTabs/_FamilyAttrEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_FamilyAttrEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_FamilyLdsEmbedList.py
+  /usr/share/gramps/DisplayTabs/_FamilyLdsEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_FamilyLdsEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_GalleryTab.py
+  /usr/share/gramps/DisplayTabs/_GalleryTab.pyc
+  /usr/share/gramps/DisplayTabs/_GalleryTab.pyo
+  /usr/share/gramps/DisplayTabs/_GrampsTab.py
+  /usr/share/gramps/DisplayTabs/_GrampsTab.pyc
+  /usr/share/gramps/DisplayTabs/_GrampsTab.pyo
+  /usr/share/gramps/DisplayTabs/_LdsEmbedList.py
+  /usr/share/gramps/DisplayTabs/_LdsEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_LdsEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_LdsModel.py
+  /usr/share/gramps/DisplayTabs/_LdsModel.pyc
+  /usr/share/gramps/DisplayTabs/_LdsModel.pyo
+  /usr/share/gramps/DisplayTabs/_LocationEmbedList.py
+  /usr/share/gramps/DisplayTabs/_LocationEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_LocationEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_LocationModel.py
+  /usr/share/gramps/DisplayTabs/_LocationModel.pyc
+  /usr/share/gramps/DisplayTabs/_LocationModel.pyo
+  /usr/share/gramps/DisplayTabs/_MediaBackRefList.py
+  /usr/share/gramps/DisplayTabs/_MediaBackRefList.pyc
+  /usr/share/gramps/DisplayTabs/_MediaBackRefList.pyo
+  /usr/share/gramps/DisplayTabs/_NameEmbedList.py
+  /usr/share/gramps/DisplayTabs/_NameEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_NameEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_NameModel.py
+  /usr/share/gramps/DisplayTabs/_NameModel.pyc
+  /usr/share/gramps/DisplayTabs/_NameModel.pyo
+  /usr/share/gramps/DisplayTabs/_NoteTab.py
+  /usr/share/gramps/DisplayTabs/_NoteTab.pyc
+  /usr/share/gramps/DisplayTabs/_NoteTab.pyo
+  /usr/share/gramps/DisplayTabs/_PersonEventEmbedList.py
+  /usr/share/gramps/DisplayTabs/_PersonEventEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_PersonEventEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_PersonRefEmbedList.py
+  /usr/share/gramps/DisplayTabs/_PersonRefEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_PersonRefEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_PersonRefModel.py
+  /usr/share/gramps/DisplayTabs/_PersonRefModel.pyc
+  /usr/share/gramps/DisplayTabs/_PersonRefModel.pyo
+  /usr/share/gramps/DisplayTabs/_PlaceBackRefList.py
+  /usr/share/gramps/DisplayTabs/_PlaceBackRefList.pyc
+  /usr/share/gramps/DisplayTabs/_PlaceBackRefList.pyo
+  /usr/share/gramps/DisplayTabs/_RepoEmbedList.py
+  /usr/share/gramps/DisplayTabs/_RepoEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_RepoEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_RepoRefModel.py
+  /usr/share/gramps/DisplayTabs/_RepoRefModel.pyc
+  /usr/share/gramps/DisplayTabs/_RepoRefModel.pyo
+  /usr/share/gramps/DisplayTabs/_SourceBackRefList.py
+  /usr/share/gramps/DisplayTabs/_SourceBackRefList.pyc
+  /usr/share/gramps/DisplayTabs/_SourceBackRefList.pyo
+  /usr/share/gramps/DisplayTabs/_SourceEmbedList.py
+  /usr/share/gramps/DisplayTabs/_SourceEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_SourceEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_SourceRefModel.py
+  /usr/share/gramps/DisplayTabs/_SourceRefModel.pyc
+  /usr/share/gramps/DisplayTabs/_SourceRefModel.pyo
+  /usr/share/gramps/DisplayTabs/_TextTab.py
+  /usr/share/gramps/DisplayTabs/_TextTab.pyc
+  /usr/share/gramps/DisplayTabs/_TextTab.pyo
+  /usr/share/gramps/DisplayTabs/_WebEmbedList.py
+  /usr/share/gramps/DisplayTabs/_WebEmbedList.pyc
+  /usr/share/gramps/DisplayTabs/_WebEmbedList.pyo
+  /usr/share/gramps/DisplayTabs/_WebModel.py
+  /usr/share/gramps/DisplayTabs/_WebModel.pyc
+  /usr/share/gramps/DisplayTabs/_WebModel.pyo
+  /usr/share/gramps/DisplayTabs/__init__.py
+  /usr/share/gramps/DisplayTabs/__init__.pyc
+  /usr/share/gramps/DisplayTabs/__init__.pyo
+  /usr/share/gramps/Editors/_EditAddress.py
+  /usr/share/gramps/Editors/_EditAddress.pyc
+  /usr/share/gramps/Editors/_EditAddress.pyo
+  /usr/share/gramps/Editors/_EditAttribute.py
+  /usr/share/gramps/Editors/_EditAttribute.pyc
+  /usr/share/gramps/Editors/_EditAttribute.pyo
+  /usr/share/gramps/Editors/_EditChildRef.py
+  /usr/share/gramps/Editors/_EditChildRef.pyc
+  /usr/share/gramps/Editors/_EditChildRef.pyo
+  /usr/share/gramps/Editors/_EditEvent.py
+  /usr/share/gramps/Editors/_EditEvent.pyc
+  /usr/share/gramps/Editors/_EditEvent.pyo
+  /usr/share/gramps/Editors/_EditEventRef.py
+  /usr/share/gramps/Editors/_EditEventRef.pyc
+  /usr/share/gramps/Editors/_EditEventRef.pyo
+  /usr/share/gramps/Editors/_EditFamily.py
+  /usr/share/gramps/Editors/_EditFamily.pyc
+  /usr/share/gramps/Editors/_EditFamily.pyo
+  /usr/share/gramps/Editors/_EditLdsOrd.py
+  /usr/share/gramps/Editors/_EditLdsOrd.pyc
+  /usr/share/gramps/Editors/_EditLdsOrd.pyo
+  /usr/share/gramps/Editors/_EditLocation.py
+  /usr/share/gramps/Editors/_EditLocation.pyc
+  /usr/share/gramps/Editors/_EditLocation.pyo
+  /usr/share/gramps/Editors/_EditMedia.py
+  /usr/share/gramps/Editors/_EditMedia.pyc
+  /usr/share/gramps/Editors/_EditMedia.pyo
+  /usr/share/gramps/Editors/_EditMediaRef.py
+  /usr/share/gramps/Editors/_EditMediaRef.pyc
+  /usr/share/gramps/Editors/_EditMediaRef.pyo
+  /usr/share/gramps/Editors/_EditName.py
+  /usr/share/gramps/Editors/_EditName.pyc
+  /usr/share/gramps/Editors/_EditName.pyo
+  /usr/share/gramps/Editors/_EditPerson.py
+  /usr/share/gramps/Editors/_EditPerson.pyc
+  /usr/share/gramps/Editors/_EditPerson.pyo
+  /usr/share/gramps/Editors/_EditPersonRef.py
+  /usr/share/gramps/Editors/_EditPersonRef.pyc
+  /usr/share/gramps/Editors/_EditPersonRef.pyo
+  /usr/share/gramps/Editors/_EditPlace.py
+  /usr/share/gramps/Editors/_EditPlace.pyc
+  /usr/share/gramps/Editors/_EditPlace.pyo
+  /usr/share/gramps/Editors/_EditPrimary.py
+  /usr/share/gramps/Editors/_EditPrimary.pyc
+  /usr/share/gramps/Editors/_EditPrimary.pyo
+  /usr/share/gramps/Editors/_EditReference.py
+  /usr/share/gramps/Editors/_EditReference.pyc
+  /usr/share/gramps/Editors/_EditReference.pyo
+  /usr/share/gramps/Editors/_EditRepoRef.py
+  /usr/share/gramps/Editors/_EditRepoRef.pyc
+  /usr/share/gramps/Editors/_EditRepoRef.pyo
+  /usr/share/gramps/Editors/_EditRepository.py
+  /usr/share/gramps/Editors/_EditRepository.pyc
+  /usr/share/gramps/Editors/_EditRepository.pyo
+  /usr/share/gramps/Editors/_EditSecondary.py
+  /usr/share/gramps/Editors/_EditSecondary.pyc
+  /usr/share/gramps/Editors/_EditSecondary.pyo
+  /usr/share/gramps/Editors/_EditSource.py
+  /usr/share/gramps/Editors/_EditSource.pyc
+  /usr/share/gramps/Editors/_EditSource.pyo
+  /usr/share/gramps/Editors/_EditSourceRef.py
+  /usr/share/gramps/Editors/_EditSourceRef.pyc
+  /usr/share/gramps/Editors/_EditSourceRef.pyo
+  /usr/share/gramps/Editors/_EditUrl.py
+  /usr/share/gramps/Editors/_EditUrl.pyc
+  /usr/share/gramps/Editors/_EditUrl.pyo
+  /usr/share/gramps/Editors/__init__.py
+  /usr/share/gramps/Editors/__init__.pyc
+  /usr/share/gramps/Editors/__init__.pyo
   /usr/share/gramps/Errors.py
   /usr/share/gramps/Errors.pyc
   /usr/share/gramps/Errors.pyo
-  /usr/share/gramps/EventEdit.py
-  /usr/share/gramps/EventEdit.pyc
-  /usr/share/gramps/EventEdit.pyo
   /usr/share/gramps/Exporter.py
   /usr/share/gramps/Exporter.pyc
   /usr/share/gramps/Exporter.pyo
-  /usr/share/gramps/FamilyView.py
-  /usr/share/gramps/FamilyView.pyc
-  /usr/share/gramps/FamilyView.pyo
+  /usr/share/gramps/FilterEditor/_EditFilter.py
+  /usr/share/gramps/FilterEditor/_EditFilter.pyc
+  /usr/share/gramps/FilterEditor/_EditFilter.pyo
+  /usr/share/gramps/FilterEditor/_EditRule.py
+  /usr/share/gramps/FilterEditor/_EditRule.pyc
+  /usr/share/gramps/FilterEditor/_EditRule.pyo
+  /usr/share/gramps/FilterEditor/_FilterEditor.py
+  /usr/share/gramps/FilterEditor/_FilterEditor.pyc
+  /usr/share/gramps/FilterEditor/_FilterEditor.pyo
+  /usr/share/gramps/FilterEditor/_ShowResults.py
+  /usr/share/gramps/FilterEditor/_ShowResults.pyc
+  /usr/share/gramps/FilterEditor/_ShowResults.pyo
+  /usr/share/gramps/FilterEditor/__init__.py
+  /usr/share/gramps/FilterEditor/__init__.pyc
+  /usr/share/gramps/FilterEditor/__init__.pyo
+  /usr/share/gramps/Filters/Rules/Event/_AllEvents.py
+  /usr/share/gramps/Filters/Rules/Event/_AllEvents.pyc
+  /usr/share/gramps/Filters/Rules/Event/_AllEvents.pyo
+  /usr/share/gramps/Filters/Rules/Event/_EventPrivate.py
+  /usr/share/gramps/Filters/Rules/Event/_EventPrivate.pyc
+  /usr/share/gramps/Filters/Rules/Event/_EventPrivate.pyo
+  /usr/share/gramps/Filters/Rules/Event/_HasIdOf.py
+  /usr/share/gramps/Filters/Rules/Event/_HasIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Event/_HasIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Event/_HasNoteMatchingSubstringOf.py
+  /usr/share/gramps/Filters/Rules/Event/_HasNoteMatchingSubstringOf.pyc
+  /usr/share/gramps/Filters/Rules/Event/_HasNoteMatchingSubstringOf.pyo
+  /usr/share/gramps/Filters/Rules/Event/_HasNoteRegexp.py
+  /usr/share/gramps/Filters/Rules/Event/_HasNoteRegexp.pyc
+  /usr/share/gramps/Filters/Rules/Event/_HasNoteRegexp.pyo
+  /usr/share/gramps/Filters/Rules/Event/_HasType.py
+  /usr/share/gramps/Filters/Rules/Event/_HasType.pyc
+  /usr/share/gramps/Filters/Rules/Event/_HasType.pyo
+  /usr/share/gramps/Filters/Rules/Event/_MatchesFilter.py
+  /usr/share/gramps/Filters/Rules/Event/_MatchesFilter.pyc
+  /usr/share/gramps/Filters/Rules/Event/_MatchesFilter.pyo
+  /usr/share/gramps/Filters/Rules/Event/_RegExpIdOf.py
+  /usr/share/gramps/Filters/Rules/Event/_RegExpIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Event/_RegExpIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Event/__init__.py
+  /usr/share/gramps/Filters/Rules/Event/__init__.pyc
+  /usr/share/gramps/Filters/Rules/Event/__init__.pyo
+  /usr/share/gramps/Filters/Rules/Family/_AllFamilies.py
+  /usr/share/gramps/Filters/Rules/Family/_AllFamilies.pyc
+  /usr/share/gramps/Filters/Rules/Family/_AllFamilies.pyo
+  /usr/share/gramps/Filters/Rules/Family/_ChildHasIdOf.py
+  /usr/share/gramps/Filters/Rules/Family/_ChildHasIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Family/_ChildHasIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Family/_ChildHasNameOf.py
+  /usr/share/gramps/Filters/Rules/Family/_ChildHasNameOf.pyc
+  /usr/share/gramps/Filters/Rules/Family/_ChildHasNameOf.pyo
+  /usr/share/gramps/Filters/Rules/Family/_FamilyPrivate.py
+  /usr/share/gramps/Filters/Rules/Family/_FamilyPrivate.pyc
+  /usr/share/gramps/Filters/Rules/Family/_FamilyPrivate.pyo
+  /usr/share/gramps/Filters/Rules/Family/_FatherHasIdOf.py
+  /usr/share/gramps/Filters/Rules/Family/_FatherHasIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Family/_FatherHasIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Family/_FatherHasNameOf.py
+  /usr/share/gramps/Filters/Rules/Family/_FatherHasNameOf.pyc
+  /usr/share/gramps/Filters/Rules/Family/_FatherHasNameOf.pyo
+  /usr/share/gramps/Filters/Rules/Family/_HasAttribute.py
+  /usr/share/gramps/Filters/Rules/Family/_HasAttribute.pyc
+  /usr/share/gramps/Filters/Rules/Family/_HasAttribute.pyo
+  /usr/share/gramps/Filters/Rules/Family/_HasEvent.py
+  /usr/share/gramps/Filters/Rules/Family/_HasEvent.pyc
+  /usr/share/gramps/Filters/Rules/Family/_HasEvent.pyo
+  /usr/share/gramps/Filters/Rules/Family/_HasIdOf.py
+  /usr/share/gramps/Filters/Rules/Family/_HasIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Family/_HasIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Family/_HasNoteMatchingSubstringOf.py
+  /usr/share/gramps/Filters/Rules/Family/_HasNoteMatchingSubstringOf.pyc
+  /usr/share/gramps/Filters/Rules/Family/_HasNoteMatchingSubstringOf.pyo
+  /usr/share/gramps/Filters/Rules/Family/_HasNoteRegexp.py
+  /usr/share/gramps/Filters/Rules/Family/_HasNoteRegexp.pyc
+  /usr/share/gramps/Filters/Rules/Family/_HasNoteRegexp.pyo
+  /usr/share/gramps/Filters/Rules/Family/_HasRelType.py
+  /usr/share/gramps/Filters/Rules/Family/_HasRelType.pyc
+  /usr/share/gramps/Filters/Rules/Family/_HasRelType.pyo
+  /usr/share/gramps/Filters/Rules/Family/_MatchesFilter.py
+  /usr/share/gramps/Filters/Rules/Family/_MatchesFilter.pyc
+  /usr/share/gramps/Filters/Rules/Family/_MatchesFilter.pyo
+  /usr/share/gramps/Filters/Rules/Family/_MemberBase.py
+  /usr/share/gramps/Filters/Rules/Family/_MemberBase.pyc
+  /usr/share/gramps/Filters/Rules/Family/_MemberBase.pyo
+  /usr/share/gramps/Filters/Rules/Family/_MotherHasIdOf.py
+  /usr/share/gramps/Filters/Rules/Family/_MotherHasIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Family/_MotherHasIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Family/_MotherHasNameOf.py
+  /usr/share/gramps/Filters/Rules/Family/_MotherHasNameOf.pyc
+  /usr/share/gramps/Filters/Rules/Family/_MotherHasNameOf.pyo
+  /usr/share/gramps/Filters/Rules/Family/_RegExpIdOf.py
+  /usr/share/gramps/Filters/Rules/Family/_RegExpIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Family/_RegExpIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Family/_SearchChildName.py
+  /usr/share/gramps/Filters/Rules/Family/_SearchChildName.pyc
+  /usr/share/gramps/Filters/Rules/Family/_SearchChildName.pyo
+  /usr/share/gramps/Filters/Rules/Family/_SearchFatherName.py
+  /usr/share/gramps/Filters/Rules/Family/_SearchFatherName.pyc
+  /usr/share/gramps/Filters/Rules/Family/_SearchFatherName.pyo
+  /usr/share/gramps/Filters/Rules/Family/_SearchMotherName.py
+  /usr/share/gramps/Filters/Rules/Family/_SearchMotherName.pyc
+  /usr/share/gramps/Filters/Rules/Family/_SearchMotherName.pyo
+  /usr/share/gramps/Filters/Rules/Family/__init__.py
+  /usr/share/gramps/Filters/Rules/Family/__init__.pyc
+  /usr/share/gramps/Filters/Rules/Family/__init__.pyo
+  /usr/share/gramps/Filters/Rules/MediaObject/_AllMedia.py
+  /usr/share/gramps/Filters/Rules/MediaObject/_AllMedia.pyc
+  /usr/share/gramps/Filters/Rules/MediaObject/_AllMedia.pyo
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasIdOf.py
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasIdOf.pyc
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasIdOf.pyo
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasMedia.py
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasMedia.pyc
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasMedia.pyo
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasNoteMatchingSubstringOf.py
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasNoteMatchingSubstringOf.pyc
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasNoteMatchingSubstringOf.pyo
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasNoteRegexp.py
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasNoteRegexp.pyc
+  /usr/share/gramps/Filters/Rules/MediaObject/_HasNoteRegexp.pyo
+  /usr/share/gramps/Filters/Rules/MediaObject/_MatchesFilter.py
+  /usr/share/gramps/Filters/Rules/MediaObject/_MatchesFilter.pyc
+  /usr/share/gramps/Filters/Rules/MediaObject/_MatchesFilter.pyo
+  /usr/share/gramps/Filters/Rules/MediaObject/_MediaPrivate.py
+  /usr/share/gramps/Filters/Rules/MediaObject/_MediaPrivate.pyc
+  /usr/share/gramps/Filters/Rules/MediaObject/_MediaPrivate.pyo
+  /usr/share/gramps/Filters/Rules/MediaObject/_RegExpIdOf.py
+  /usr/share/gramps/Filters/Rules/MediaObject/_RegExpIdOf.pyc
+  /usr/share/gramps/Filters/Rules/MediaObject/_RegExpIdOf.pyo
+  /usr/share/gramps/Filters/Rules/MediaObject/__init__.py
+  /usr/share/gramps/Filters/Rules/MediaObject/__init__.pyc
+  /usr/share/gramps/Filters/Rules/MediaObject/__init__.pyo
+  /usr/share/gramps/Filters/Rules/Person/_Disconnected.py
+  /usr/share/gramps/Filters/Rules/Person/_Disconnected.pyc
+  /usr/share/gramps/Filters/Rules/Person/_Disconnected.pyo
+  /usr/share/gramps/Filters/Rules/Person/_Everyone.py
+  /usr/share/gramps/Filters/Rules/Person/_Everyone.pyc
+  /usr/share/gramps/Filters/Rules/Person/_Everyone.pyo
+  /usr/share/gramps/Filters/Rules/Person/_FamilyWithIncompleteEvent.py
+  /usr/share/gramps/Filters/Rules/Person/_FamilyWithIncompleteEvent.pyc
+  /usr/share/gramps/Filters/Rules/Person/_FamilyWithIncompleteEvent.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasAttribute.py
+  /usr/share/gramps/Filters/Rules/Person/_HasAttribute.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasAttribute.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasBirth.py
+  /usr/share/gramps/Filters/Rules/Person/_HasBirth.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasBirth.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasCommonAncestorWith.py
+  /usr/share/gramps/Filters/Rules/Person/_HasCommonAncestorWith.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasCommonAncestorWith.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasCommonAncestorWithFilterMatch.py
+  /usr/share/gramps/Filters/Rules/Person/_HasCommonAncestorWithFilterMatch.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasCommonAncestorWithFilterMatch.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasCompleteRecord.py
+  /usr/share/gramps/Filters/Rules/Person/_HasCompleteRecord.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasCompleteRecord.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasDeath.py
+  /usr/share/gramps/Filters/Rules/Person/_HasDeath.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasDeath.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasEvent.py
+  /usr/share/gramps/Filters/Rules/Person/_HasEvent.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasEvent.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasFamilyAttribute.py
+  /usr/share/gramps/Filters/Rules/Person/_HasFamilyAttribute.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasFamilyAttribute.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasFamilyEvent.py
+  /usr/share/gramps/Filters/Rules/Person/_HasFamilyEvent.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasFamilyEvent.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasIdOf.py
+  /usr/share/gramps/Filters/Rules/Person/_HasIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasNameOf.py
+  /usr/share/gramps/Filters/Rules/Person/_HasNameOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasNameOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasNote.py
+  /usr/share/gramps/Filters/Rules/Person/_HasNote.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasNote.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasNoteMatchingSubstringOf.py
+  /usr/share/gramps/Filters/Rules/Person/_HasNoteMatchingSubstringOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasNoteMatchingSubstringOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasNoteRegexp.py
+  /usr/share/gramps/Filters/Rules/Person/_HasNoteRegexp.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasNoteRegexp.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasRelationship.py
+  /usr/share/gramps/Filters/Rules/Person/_HasRelationship.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasRelationship.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasSourceOf.py
+  /usr/share/gramps/Filters/Rules/Person/_HasSourceOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasSourceOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasTextMatchingRegexpOf.py
+  /usr/share/gramps/Filters/Rules/Person/_HasTextMatchingRegexpOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasTextMatchingRegexpOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasTextMatchingSubstringOf.py
+  /usr/share/gramps/Filters/Rules/Person/_HasTextMatchingSubstringOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasTextMatchingSubstringOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HasUnknownGender.py
+  /usr/share/gramps/Filters/Rules/Person/_HasUnknownGender.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HasUnknownGender.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HaveAltFamilies.py
+  /usr/share/gramps/Filters/Rules/Person/_HaveAltFamilies.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HaveAltFamilies.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HaveChildren.py
+  /usr/share/gramps/Filters/Rules/Person/_HaveChildren.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HaveChildren.pyo
+  /usr/share/gramps/Filters/Rules/Person/_HavePhotos.py
+  /usr/share/gramps/Filters/Rules/Person/_HavePhotos.pyc
+  /usr/share/gramps/Filters/Rules/Person/_HavePhotos.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IncompleteNames.py
+  /usr/share/gramps/Filters/Rules/Person/_IncompleteNames.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IncompleteNames.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsAncestorOf.py
+  /usr/share/gramps/Filters/Rules/Person/_IsAncestorOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsAncestorOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsAncestorOfFilterMatch.py
+  /usr/share/gramps/Filters/Rules/Person/_IsAncestorOfFilterMatch.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsAncestorOfFilterMatch.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsBookmarked.py
+  /usr/share/gramps/Filters/Rules/Person/_IsBookmarked.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsBookmarked.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsChildOfFilterMatch.py
+  /usr/share/gramps/Filters/Rules/Person/_IsChildOfFilterMatch.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsChildOfFilterMatch.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsDefaultPerson.py
+  /usr/share/gramps/Filters/Rules/Person/_IsDefaultPerson.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsDefaultPerson.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsDescendantFamilyOf.py
+  /usr/share/gramps/Filters/Rules/Person/_IsDescendantFamilyOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsDescendantFamilyOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsDescendantOf.py
+  /usr/share/gramps/Filters/Rules/Person/_IsDescendantOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsDescendantOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsDescendantOfFilterMatch.py
+  /usr/share/gramps/Filters/Rules/Person/_IsDescendantOfFilterMatch.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsDescendantOfFilterMatch.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsFemale.py
+  /usr/share/gramps/Filters/Rules/Person/_IsFemale.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsFemale.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationAncestorOf.py
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationAncestorOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationAncestorOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationAncestorOfBookmarked.py
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationAncestorOfBookmarked.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationAncestorOfBookmarked.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationAncestorOfDefaultPerson.py
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationAncestorOfDefaultPerson.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationAncestorOfDefaultPerson.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationDescendantOf.py
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationDescendantOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsLessThanNthGenerationDescendantOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsMale.py
+  /usr/share/gramps/Filters/Rules/Person/_IsMale.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsMale.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsMoreThanNthGenerationAncestorOf.py
+  /usr/share/gramps/Filters/Rules/Person/_IsMoreThanNthGenerationAncestorOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsMoreThanNthGenerationAncestorOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsMoreThanNthGenerationDescendantOf.py
+  /usr/share/gramps/Filters/Rules/Person/_IsMoreThanNthGenerationDescendantOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsMoreThanNthGenerationDescendantOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsParentOfFilterMatch.py
+  /usr/share/gramps/Filters/Rules/Person/_IsParentOfFilterMatch.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsParentOfFilterMatch.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsSiblingOfFilterMatch.py
+  /usr/share/gramps/Filters/Rules/Person/_IsSiblingOfFilterMatch.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsSiblingOfFilterMatch.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsSpouseOfFilterMatch.py
+  /usr/share/gramps/Filters/Rules/Person/_IsSpouseOfFilterMatch.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsSpouseOfFilterMatch.pyo
+  /usr/share/gramps/Filters/Rules/Person/_IsWitness.py
+  /usr/share/gramps/Filters/Rules/Person/_IsWitness.pyc
+  /usr/share/gramps/Filters/Rules/Person/_IsWitness.pyo
+  /usr/share/gramps/Filters/Rules/Person/_MatchIdOf.py
+  /usr/share/gramps/Filters/Rules/Person/_MatchIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_MatchIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_MatchesFilter.py
+  /usr/share/gramps/Filters/Rules/Person/_MatchesFilter.pyc
+  /usr/share/gramps/Filters/Rules/Person/_MatchesFilter.pyo
+  /usr/share/gramps/Filters/Rules/Person/_MultipleMarriages.py
+  /usr/share/gramps/Filters/Rules/Person/_MultipleMarriages.pyc
+  /usr/share/gramps/Filters/Rules/Person/_MultipleMarriages.pyo
+  /usr/share/gramps/Filters/Rules/Person/_NeverMarried.py
+  /usr/share/gramps/Filters/Rules/Person/_NeverMarried.pyc
+  /usr/share/gramps/Filters/Rules/Person/_NeverMarried.pyo
+  /usr/share/gramps/Filters/Rules/Person/_NoBirthdate.py
+  /usr/share/gramps/Filters/Rules/Person/_NoBirthdate.pyc
+  /usr/share/gramps/Filters/Rules/Person/_NoBirthdate.pyo
+  /usr/share/gramps/Filters/Rules/Person/_PeoplePrivate.py
+  /usr/share/gramps/Filters/Rules/Person/_PeoplePrivate.pyc
+  /usr/share/gramps/Filters/Rules/Person/_PeoplePrivate.pyo
+  /usr/share/gramps/Filters/Rules/Person/_PersonWithIncompleteEvent.py
+  /usr/share/gramps/Filters/Rules/Person/_PersonWithIncompleteEvent.pyc
+  /usr/share/gramps/Filters/Rules/Person/_PersonWithIncompleteEvent.pyo
+  /usr/share/gramps/Filters/Rules/Person/_ProbablyAlive.py
+  /usr/share/gramps/Filters/Rules/Person/_ProbablyAlive.pyc
+  /usr/share/gramps/Filters/Rules/Person/_ProbablyAlive.pyo
+  /usr/share/gramps/Filters/Rules/Person/_RegExpIdOf.py
+  /usr/share/gramps/Filters/Rules/Person/_RegExpIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Person/_RegExpIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Person/_RegExpName.py
+  /usr/share/gramps/Filters/Rules/Person/_RegExpName.pyc
+  /usr/share/gramps/Filters/Rules/Person/_RegExpName.pyo
+  /usr/share/gramps/Filters/Rules/Person/_RelationshipPathBetween.py
+  /usr/share/gramps/Filters/Rules/Person/_RelationshipPathBetween.pyc
+  /usr/share/gramps/Filters/Rules/Person/_RelationshipPathBetween.pyo
+  /usr/share/gramps/Filters/Rules/Person/_RelationshipPathBetweenBookmarks.py
+  /usr/share/gramps/Filters/Rules/Person/_RelationshipPathBetweenBookmarks.pyc
+  /usr/share/gramps/Filters/Rules/Person/_RelationshipPathBetweenBookmarks.pyo
+  /usr/share/gramps/Filters/Rules/Person/_SearchName.py
+  /usr/share/gramps/Filters/Rules/Person/_SearchName.pyc
+  /usr/share/gramps/Filters/Rules/Person/_SearchName.pyo
+  /usr/share/gramps/Filters/Rules/Person/__init__.py
+  /usr/share/gramps/Filters/Rules/Person/__init__.pyc
+  /usr/share/gramps/Filters/Rules/Person/__init__.pyo
+  /usr/share/gramps/Filters/Rules/Place/_AllPlaces.py
+  /usr/share/gramps/Filters/Rules/Place/_AllPlaces.pyc
+  /usr/share/gramps/Filters/Rules/Place/_AllPlaces.pyo
+  /usr/share/gramps/Filters/Rules/Place/_HasIdOf.py
+  /usr/share/gramps/Filters/Rules/Place/_HasIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Place/_HasIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Place/_HasNoteMatchingSubstringOf.py
+  /usr/share/gramps/Filters/Rules/Place/_HasNoteMatchingSubstringOf.pyc
+  /usr/share/gramps/Filters/Rules/Place/_HasNoteMatchingSubstringOf.pyo
+  /usr/share/gramps/Filters/Rules/Place/_HasNoteRegexp.py
+  /usr/share/gramps/Filters/Rules/Place/_HasNoteRegexp.pyc
+  /usr/share/gramps/Filters/Rules/Place/_HasNoteRegexp.pyo
+  /usr/share/gramps/Filters/Rules/Place/_HasPlace.py
+  /usr/share/gramps/Filters/Rules/Place/_HasPlace.pyc
+  /usr/share/gramps/Filters/Rules/Place/_HasPlace.pyo
+  /usr/share/gramps/Filters/Rules/Place/_MatchesFilter.py
+  /usr/share/gramps/Filters/Rules/Place/_MatchesFilter.pyc
+  /usr/share/gramps/Filters/Rules/Place/_MatchesFilter.pyo
+  /usr/share/gramps/Filters/Rules/Place/_PlacePrivate.py
+  /usr/share/gramps/Filters/Rules/Place/_PlacePrivate.pyc
+  /usr/share/gramps/Filters/Rules/Place/_PlacePrivate.pyo
+  /usr/share/gramps/Filters/Rules/Place/_RegExpIdOf.py
+  /usr/share/gramps/Filters/Rules/Place/_RegExpIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Place/_RegExpIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Place/__init__.py
+  /usr/share/gramps/Filters/Rules/Place/__init__.pyc
+  /usr/share/gramps/Filters/Rules/Place/__init__.pyo
+  /usr/share/gramps/Filters/Rules/Repository/_AllRepos.py
+  /usr/share/gramps/Filters/Rules/Repository/_AllRepos.pyc
+  /usr/share/gramps/Filters/Rules/Repository/_AllRepos.pyo
+  /usr/share/gramps/Filters/Rules/Repository/_HasIdOf.py
+  /usr/share/gramps/Filters/Rules/Repository/_HasIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Repository/_HasIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Repository/_HasNoteMatchingSubstringOf.py
+  /usr/share/gramps/Filters/Rules/Repository/_HasNoteMatchingSubstringOf.pyc
+  /usr/share/gramps/Filters/Rules/Repository/_HasNoteMatchingSubstringOf.pyo
+  /usr/share/gramps/Filters/Rules/Repository/_HasNoteRegexp.py
+  /usr/share/gramps/Filters/Rules/Repository/_HasNoteRegexp.pyc
+  /usr/share/gramps/Filters/Rules/Repository/_HasNoteRegexp.pyo
+  /usr/share/gramps/Filters/Rules/Repository/_HasRepo.py
+  /usr/share/gramps/Filters/Rules/Repository/_HasRepo.pyc
+  /usr/share/gramps/Filters/Rules/Repository/_HasRepo.pyo
+  /usr/share/gramps/Filters/Rules/Repository/_MatchesFilter.py
+  /usr/share/gramps/Filters/Rules/Repository/_MatchesFilter.pyc
+  /usr/share/gramps/Filters/Rules/Repository/_MatchesFilter.pyo
+  /usr/share/gramps/Filters/Rules/Repository/_RegExpIdOf.py
+  /usr/share/gramps/Filters/Rules/Repository/_RegExpIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Repository/_RegExpIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Repository/_RepoPrivate.py
+  /usr/share/gramps/Filters/Rules/Repository/_RepoPrivate.pyc
+  /usr/share/gramps/Filters/Rules/Repository/_RepoPrivate.pyo
+  /usr/share/gramps/Filters/Rules/Repository/__init__.py
+  /usr/share/gramps/Filters/Rules/Repository/__init__.pyc
+  /usr/share/gramps/Filters/Rules/Repository/__init__.pyo
+  /usr/share/gramps/Filters/Rules/Source/_AllSources.py
+  /usr/share/gramps/Filters/Rules/Source/_AllSources.pyc
+  /usr/share/gramps/Filters/Rules/Source/_AllSources.pyo
+  /usr/share/gramps/Filters/Rules/Source/_HasIdOf.py
+  /usr/share/gramps/Filters/Rules/Source/_HasIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Source/_HasIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Source/_HasNoteMatchingSubstringOf.py
+  /usr/share/gramps/Filters/Rules/Source/_HasNoteMatchingSubstringOf.pyc
+  /usr/share/gramps/Filters/Rules/Source/_HasNoteMatchingSubstringOf.pyo
+  /usr/share/gramps/Filters/Rules/Source/_HasNoteRegexp.py
+  /usr/share/gramps/Filters/Rules/Source/_HasNoteRegexp.pyc
+  /usr/share/gramps/Filters/Rules/Source/_HasNoteRegexp.pyo
+  /usr/share/gramps/Filters/Rules/Source/_HasSource.py
+  /usr/share/gramps/Filters/Rules/Source/_HasSource.pyc
+  /usr/share/gramps/Filters/Rules/Source/_HasSource.pyo
+  /usr/share/gramps/Filters/Rules/Source/_MatchesFilter.py
+  /usr/share/gramps/Filters/Rules/Source/_MatchesFilter.pyc
+  /usr/share/gramps/Filters/Rules/Source/_MatchesFilter.pyo
+  /usr/share/gramps/Filters/Rules/Source/_RegExpIdOf.py
+  /usr/share/gramps/Filters/Rules/Source/_RegExpIdOf.pyc
+  /usr/share/gramps/Filters/Rules/Source/_RegExpIdOf.pyo
+  /usr/share/gramps/Filters/Rules/Source/_SourcePrivate.py
+  /usr/share/gramps/Filters/Rules/Source/_SourcePrivate.pyc
+  /usr/share/gramps/Filters/Rules/Source/_SourcePrivate.pyo
+  /usr/share/gramps/Filters/Rules/Source/__init__.py
+  /usr/share/gramps/Filters/Rules/Source/__init__.pyc
+  /usr/share/gramps/Filters/Rules/Source/__init__.pyo
+  /usr/share/gramps/Filters/Rules/_Everything.py
+  /usr/share/gramps/Filters/Rules/_Everything.pyc
+  /usr/share/gramps/Filters/Rules/_Everything.pyo
+  /usr/share/gramps/Filters/Rules/_HasAttributeBase.py
+  /usr/share/gramps/Filters/Rules/_HasAttributeBase.pyc
+  /usr/share/gramps/Filters/Rules/_HasAttributeBase.pyo
+  /usr/share/gramps/Filters/Rules/_HasEventBase.py
+  /usr/share/gramps/Filters/Rules/_HasEventBase.pyc
+  /usr/share/gramps/Filters/Rules/_HasEventBase.pyo
+  /usr/share/gramps/Filters/Rules/_HasGrampsId.py
+  /usr/share/gramps/Filters/Rules/_HasGrampsId.pyc
+  /usr/share/gramps/Filters/Rules/_HasGrampsId.pyo
+  /usr/share/gramps/Filters/Rules/_HasNoteRegexBase.py
+  /usr/share/gramps/Filters/Rules/_HasNoteRegexBase.pyc
+  /usr/share/gramps/Filters/Rules/_HasNoteRegexBase.pyo
+  /usr/share/gramps/Filters/Rules/_HasNoteSubstrBase.py
+  /usr/share/gramps/Filters/Rules/_HasNoteSubstrBase.pyc
+  /usr/share/gramps/Filters/Rules/_HasNoteSubstrBase.pyo
+  /usr/share/gramps/Filters/Rules/_HasTextMatchingRegexpOf.py
+  /usr/share/gramps/Filters/Rules/_HasTextMatchingRegexpOf.pyc
+  /usr/share/gramps/Filters/Rules/_HasTextMatchingRegexpOf.pyo
+  /usr/share/gramps/Filters/Rules/_HasTextMatchingSubstringOf.py
+  /usr/share/gramps/Filters/Rules/_HasTextMatchingSubstringOf.pyc
+  /usr/share/gramps/Filters/Rules/_HasTextMatchingSubstringOf.pyo
+  /usr/share/gramps/Filters/Rules/_IsPrivate.py
+  /usr/share/gramps/Filters/Rules/_IsPrivate.pyc
+  /usr/share/gramps/Filters/Rules/_IsPrivate.pyo
+  /usr/share/gramps/Filters/Rules/_MatchesFilterBase.py
+  /usr/share/gramps/Filters/Rules/_MatchesFilterBase.pyc
+  /usr/share/gramps/Filters/Rules/_MatchesFilterBase.pyo
+  /usr/share/gramps/Filters/Rules/_RegExpIdBase.py
+  /usr/share/gramps/Filters/Rules/_RegExpIdBase.pyc
+  /usr/share/gramps/Filters/Rules/_RegExpIdBase.pyo
+  /usr/share/gramps/Filters/Rules/_Rule.py
+  /usr/share/gramps/Filters/Rules/_Rule.pyc
+  /usr/share/gramps/Filters/Rules/_Rule.pyo
+  /usr/share/gramps/Filters/Rules/_RuleUtils.py
+  /usr/share/gramps/Filters/Rules/_RuleUtils.pyc
+  /usr/share/gramps/Filters/Rules/_RuleUtils.pyo
+  /usr/share/gramps/Filters/Rules/__init__.py
+  /usr/share/gramps/Filters/Rules/__init__.pyc
+  /usr/share/gramps/Filters/Rules/__init__.pyo
+  /usr/share/gramps/Filters/SideBar/_EventSidebarFilter.py
+  /usr/share/gramps/Filters/SideBar/_EventSidebarFilter.pyc
+  /usr/share/gramps/Filters/SideBar/_EventSidebarFilter.pyo
+  /usr/share/gramps/Filters/SideBar/_FamilySidebarFilter.py
+  /usr/share/gramps/Filters/SideBar/_FamilySidebarFilter.pyc
+  /usr/share/gramps/Filters/SideBar/_FamilySidebarFilter.pyo
+  /usr/share/gramps/Filters/SideBar/_MediaSidebarFilter.py
+  /usr/share/gramps/Filters/SideBar/_MediaSidebarFilter.pyc
+  /usr/share/gramps/Filters/SideBar/_MediaSidebarFilter.pyo
+  /usr/share/gramps/Filters/SideBar/_PersonSidebarFilter.py
+  /usr/share/gramps/Filters/SideBar/_PersonSidebarFilter.pyc
+  /usr/share/gramps/Filters/SideBar/_PersonSidebarFilter.pyo
+  /usr/share/gramps/Filters/SideBar/_PlaceSidebarFilter.py
+  /usr/share/gramps/Filters/SideBar/_PlaceSidebarFilter.pyc
+  /usr/share/gramps/Filters/SideBar/_PlaceSidebarFilter.pyo
+  /usr/share/gramps/Filters/SideBar/_RepoSidebarFilter.py
+  /usr/share/gramps/Filters/SideBar/_RepoSidebarFilter.pyc
+  /usr/share/gramps/Filters/SideBar/_RepoSidebarFilter.pyo
+  /usr/share/gramps/Filters/SideBar/_SidebarFilter.py
+  /usr/share/gramps/Filters/SideBar/_SidebarFilter.pyc
+  /usr/share/gramps/Filters/SideBar/_SidebarFilter.pyo
+  /usr/share/gramps/Filters/SideBar/_SourceSidebarFilter.py
+  /usr/share/gramps/Filters/SideBar/_SourceSidebarFilter.pyc
+  /usr/share/gramps/Filters/SideBar/_SourceSidebarFilter.pyo
+  /usr/share/gramps/Filters/SideBar/__init__.py
+  /usr/share/gramps/Filters/SideBar/__init__.pyc
+  /usr/share/gramps/Filters/SideBar/__init__.pyo
+  /usr/share/gramps/Filters/_FilterComboBox.py
+  /usr/share/gramps/Filters/_FilterComboBox.pyc
+  /usr/share/gramps/Filters/_FilterComboBox.pyo
+  /usr/share/gramps/Filters/_FilterList.py
+  /usr/share/gramps/Filters/_FilterList.pyc
+  /usr/share/gramps/Filters/_FilterList.pyo
+  /usr/share/gramps/Filters/_FilterMenu.py
+  /usr/share/gramps/Filters/_FilterMenu.pyc
+  /usr/share/gramps/Filters/_FilterMenu.pyo
+  /usr/share/gramps/Filters/_FilterParser.py
+  /usr/share/gramps/Filters/_FilterParser.pyc
+  /usr/share/gramps/Filters/_FilterParser.pyo
+  /usr/share/gramps/Filters/_FilterStore.py
+  /usr/share/gramps/Filters/_FilterStore.pyc
+  /usr/share/gramps/Filters/_FilterStore.pyo
+  /usr/share/gramps/Filters/_GenericFilter.py
+  /usr/share/gramps/Filters/_GenericFilter.pyc
+  /usr/share/gramps/Filters/_GenericFilter.pyo
+  /usr/share/gramps/Filters/_ParamFilter.py
+  /usr/share/gramps/Filters/_ParamFilter.pyc
+  /usr/share/gramps/Filters/_ParamFilter.pyo
+  /usr/share/gramps/Filters/_SearchBar.py
+  /usr/share/gramps/Filters/_SearchBar.pyc
+  /usr/share/gramps/Filters/_SearchBar.pyo
+  /usr/share/gramps/Filters/_SearchFilter.py
+  /usr/share/gramps/Filters/_SearchFilter.pyc
+  /usr/share/gramps/Filters/_SearchFilter.pyo
+  /usr/share/gramps/Filters/__init__.py
+  /usr/share/gramps/Filters/__init__.pyc
+  /usr/share/gramps/Filters/__init__.pyo
   /usr/share/gramps/FontScale.py
   /usr/share/gramps/FontScale.pyc
   /usr/share/gramps/FontScale.pyo
-  /usr/share/gramps/GedcomInfo.py
-  /usr/share/gramps/GedcomInfo.pyc
-  /usr/share/gramps/GedcomInfo.pyo
-  /usr/share/gramps/GenericFilter.py
-  /usr/share/gramps/GenericFilter.pyc
-  /usr/share/gramps/GenericFilter.pyo
-  /usr/share/gramps/GrampsBSDDB.py
-  /usr/share/gramps/GrampsBSDDB.pyc
-  /usr/share/gramps/GrampsBSDDB.pyo
   /usr/share/gramps/GrampsCfg.py
   /usr/share/gramps/GrampsCfg.pyc
   /usr/share/gramps/GrampsCfg.pyo
-  /usr/share/gramps/GrampsDBCallback.py
-  /usr/share/gramps/GrampsDBCallback.pyc
-  /usr/share/gramps/GrampsDBCallback.pyo
-  /usr/share/gramps/GrampsDbBase.py
-  /usr/share/gramps/GrampsDbBase.pyc
-  /usr/share/gramps/GrampsDbBase.pyo
+  /usr/share/gramps/GrampsDb/_DbUtils.py
+  /usr/share/gramps/GrampsDb/_DbUtils.pyc
+  /usr/share/gramps/GrampsDb/_DbUtils.pyo
+  /usr/share/gramps/GrampsDb/_GedTokens.py
+  /usr/share/gramps/GrampsDb/_GedTokens.pyc
+  /usr/share/gramps/GrampsDb/_GedTokens.pyo
+  /usr/share/gramps/GrampsDb/_GedcomInfo.py
+  /usr/share/gramps/GrampsDb/_GedcomInfo.pyc
+  /usr/share/gramps/GrampsDb/_GedcomInfo.pyo
+  /usr/share/gramps/GrampsDb/_GrampsBSDDB.py
+  /usr/share/gramps/GrampsDb/_GrampsBSDDB.pyc
+  /usr/share/gramps/GrampsDb/_GrampsBSDDB.pyo
+  /usr/share/gramps/GrampsDb/_GrampsDBCallback.py
+  /usr/share/gramps/GrampsDb/_GrampsDBCallback.pyc
+  /usr/share/gramps/GrampsDb/_GrampsDBCallback.pyo
+  /usr/share/gramps/GrampsDb/_GrampsDbBase.py
+  /usr/share/gramps/GrampsDb/_GrampsDbBase.pyc
+  /usr/share/gramps/GrampsDb/_GrampsDbBase.pyo
+  /usr/share/gramps/GrampsDb/_GrampsDbExceptions.py
+  /usr/share/gramps/GrampsDb/_GrampsDbExceptions.pyc
+  /usr/share/gramps/GrampsDb/_GrampsDbExceptions.pyo
+  /usr/share/gramps/GrampsDb/_GrampsDbFactories.py
+  /usr/share/gramps/GrampsDb/_GrampsDbFactories.pyc
+  /usr/share/gramps/GrampsDb/_GrampsDbFactories.pyo
+  /usr/share/gramps/GrampsDb/_GrampsGEDDB.py
+  /usr/share/gramps/GrampsDb/_GrampsGEDDB.pyc
+  /usr/share/gramps/GrampsDb/_GrampsGEDDB.pyo
+  /usr/share/gramps/GrampsDb/_GrampsInMemDB.py
+  /usr/share/gramps/GrampsDb/_GrampsInMemDB.pyc
+  /usr/share/gramps/GrampsDb/_GrampsInMemDB.pyo
+  /usr/share/gramps/GrampsDb/_GrampsXMLDB.py
+  /usr/share/gramps/GrampsDb/_GrampsXMLDB.pyc
+  /usr/share/gramps/GrampsDb/_GrampsXMLDB.pyo
+  /usr/share/gramps/GrampsDb/_ReadGedcom.py
+  /usr/share/gramps/GrampsDb/_ReadGedcom.pyc
+  /usr/share/gramps/GrampsDb/_ReadGedcom.pyo
+  /usr/share/gramps/GrampsDb/_ReadGrdb.py
+  /usr/share/gramps/GrampsDb/_ReadGrdb.pyc
+  /usr/share/gramps/GrampsDb/_ReadGrdb.pyo
+  /usr/share/gramps/GrampsDb/_ReadXML.py
+  /usr/share/gramps/GrampsDb/_ReadXML.pyc
+  /usr/share/gramps/GrampsDb/_ReadXML.pyo
+  /usr/share/gramps/GrampsDb/_WriteGedcom.py
+  /usr/share/gramps/GrampsDb/_WriteGedcom.pyc
+  /usr/share/gramps/GrampsDb/_WriteGedcom.pyo
+  /usr/share/gramps/GrampsDb/_WriteGrdb.py
+  /usr/share/gramps/GrampsDb/_WriteGrdb.pyc
+  /usr/share/gramps/GrampsDb/_WriteGrdb.pyo
+  /usr/share/gramps/GrampsDb/_WriteXML.py
+  /usr/share/gramps/GrampsDb/_WriteXML.pyc
+  /usr/share/gramps/GrampsDb/_WriteXML.pyo
+  /usr/share/gramps/GrampsDb/__init__.py
+  /usr/share/gramps/GrampsDb/__init__.pyc
+  /usr/share/gramps/GrampsDb/__init__.pyo
+  /usr/share/gramps/GrampsDb/gedcomexport.glade
+  /usr/share/gramps/GrampsDb/gedcomimport.glade
   /usr/share/gramps/GrampsDisplay.py
   /usr/share/gramps/GrampsDisplay.pyc
   /usr/share/gramps/GrampsDisplay.pyo
-  /usr/share/gramps/GrampsGEDDB.py
-  /usr/share/gramps/GrampsGEDDB.pyc
-  /usr/share/gramps/GrampsGEDDB.pyo
-  /usr/share/gramps/GrampsGconfKeys.py
-  /usr/share/gramps/GrampsGconfKeys.pyc
-  /usr/share/gramps/GrampsGconfKeys.pyo
-  /usr/share/gramps/GrampsInMemDB.py
-  /usr/share/gramps/GrampsInMemDB.pyc
-  /usr/share/gramps/GrampsInMemDB.pyo
-  /usr/share/gramps/GrampsIniKeys.py
-  /usr/share/gramps/GrampsIniKeys.pyc
-  /usr/share/gramps/GrampsIniKeys.pyo
-  /usr/share/gramps/GrampsKeys.py
-  /usr/share/gramps/GrampsKeys.pyc
-  /usr/share/gramps/GrampsKeys.pyo
-  /usr/share/gramps/GrampsMime.py
-  /usr/share/gramps/GrampsMime.pyc
-  /usr/share/gramps/GrampsMime.pyo
-  /usr/share/gramps/GrampsXMLDB.py
-  /usr/share/gramps/GrampsXMLDB.pyc
-  /usr/share/gramps/GrampsXMLDB.pyo
-  /usr/share/gramps/ImageSelect.py
-  /usr/share/gramps/ImageSelect.pyc
-  /usr/share/gramps/ImageSelect.pyo
+  /usr/share/gramps/GrampsLocale.py
+  /usr/share/gramps/GrampsLocale.pyc
+  /usr/share/gramps/GrampsLocale.pyo
+  /usr/share/gramps/GrampsLogger/_ErrorReportAssistant.py
+  /usr/share/gramps/GrampsLogger/_ErrorReportAssistant.pyc
+  /usr/share/gramps/GrampsLogger/_ErrorReportAssistant.pyo
+  /usr/share/gramps/GrampsLogger/_ErrorView.py
+  /usr/share/gramps/GrampsLogger/_ErrorView.pyc
+  /usr/share/gramps/GrampsLogger/_ErrorView.pyo
+  /usr/share/gramps/GrampsLogger/_GtkHandler.py
+  /usr/share/gramps/GrampsLogger/_GtkHandler.pyc
+  /usr/share/gramps/GrampsLogger/_GtkHandler.pyo
+  /usr/share/gramps/GrampsLogger/_RotateHandler.py
+  /usr/share/gramps/GrampsLogger/_RotateHandler.pyc
+  /usr/share/gramps/GrampsLogger/_RotateHandler.pyo
+  /usr/share/gramps/GrampsLogger/__init__.py
+  /usr/share/gramps/GrampsLogger/__init__.pyc
+  /usr/share/gramps/GrampsLogger/__init__.pyo
+  /usr/share/gramps/GrampsWidgets.py
+  /usr/share/gramps/GrampsWidgets.pyc
+  /usr/share/gramps/GrampsWidgets.pyo
   /usr/share/gramps/ImgManip.py
   /usr/share/gramps/ImgManip.pyc
   /usr/share/gramps/ImgManip.pyo
+  /usr/share/gramps/LdsUtils.py
+  /usr/share/gramps/LdsUtils.pyc
+  /usr/share/gramps/LdsUtils.pyo
   /usr/share/gramps/ListModel.py
   /usr/share/gramps/ListModel.pyc
   /usr/share/gramps/ListModel.pyo
-  /usr/share/gramps/LocEdit.py
-  /usr/share/gramps/LocEdit.pyc
-  /usr/share/gramps/LocEdit.pyo
-  /usr/share/gramps/Marriage.py
-  /usr/share/gramps/Marriage.pyc
-  /usr/share/gramps/Marriage.pyo
-  /usr/share/gramps/MediaView.py
-  /usr/share/gramps/MediaView.pyc
-  /usr/share/gramps/MediaView.pyo
-  /usr/share/gramps/MergeData.py
-  /usr/share/gramps/MergeData.pyc
-  /usr/share/gramps/MergeData.pyo
-  /usr/share/gramps/MergePeople.py
-  /usr/share/gramps/MergePeople.pyc
-  /usr/share/gramps/MergePeople.pyo
+  /usr/share/gramps/ManagedWindow.py
+  /usr/share/gramps/ManagedWindow.pyc
+  /usr/share/gramps/ManagedWindow.pyo
+  /usr/share/gramps/Merge/_MergePerson.py
+  /usr/share/gramps/Merge/_MergePerson.pyc
+  /usr/share/gramps/Merge/_MergePerson.pyo
+  /usr/share/gramps/Merge/_MergePlace.py
+  /usr/share/gramps/Merge/_MergePlace.pyc
+  /usr/share/gramps/Merge/_MergePlace.pyo
+  /usr/share/gramps/Merge/_MergeSource.py
+  /usr/share/gramps/Merge/_MergeSource.pyc
+  /usr/share/gramps/Merge/_MergeSource.pyo
+  /usr/share/gramps/Merge/__init__.py
+  /usr/share/gramps/Merge/__init__.pyc
+  /usr/share/gramps/Merge/__init__.pyo
+  /usr/share/gramps/Mime/_GnomeMime.py
+  /usr/share/gramps/Mime/_GnomeMime.pyc
+  /usr/share/gramps/Mime/_GnomeMime.pyo
+  /usr/share/gramps/Mime/_PythonMime.py
+  /usr/share/gramps/Mime/_PythonMime.pyc
+  /usr/share/gramps/Mime/_PythonMime.pyo
+  /usr/share/gramps/Mime/_WinMime.py
+  /usr/share/gramps/Mime/_WinMime.pyc
+  /usr/share/gramps/Mime/_WinMime.pyo
+  /usr/share/gramps/Mime/__init__.py
+  /usr/share/gramps/Mime/__init__.pyc
+  /usr/share/gramps/Mime/__init__.pyo
   /usr/share/gramps/NameDisplay.py
   /usr/share/gramps/NameDisplay.pyc
   /usr/share/gramps/NameDisplay.pyo
-  /usr/share/gramps/NameEdit.py
-  /usr/share/gramps/NameEdit.pyc
-  /usr/share/gramps/NameEdit.pyo
-  /usr/share/gramps/NoteEdit.py
-  /usr/share/gramps/NoteEdit.pyc
-  /usr/share/gramps/NoteEdit.pyo
-  /usr/share/gramps/Options.py
-  /usr/share/gramps/Options.pyc
-  /usr/share/gramps/Options.pyo
-  /usr/share/gramps/PaperMenu.py
-  /usr/share/gramps/PaperMenu.pyc
-  /usr/share/gramps/PaperMenu.pyo
-  /usr/share/gramps/PedView.py
-  /usr/share/gramps/PedView.pyc
-  /usr/share/gramps/PedView.pyo
-  /usr/share/gramps/PeopleModel.py
-  /usr/share/gramps/PeopleModel.pyc
-  /usr/share/gramps/PeopleModel.pyo
-  /usr/share/gramps/PeopleView.py
-  /usr/share/gramps/PeopleView.pyc
-  /usr/share/gramps/PeopleView.pyo
-  /usr/share/gramps/PlaceView.py
-  /usr/share/gramps/PlaceView.pyc
-  /usr/share/gramps/PlaceView.pyo
-  /usr/share/gramps/PluginMgr.py
-  /usr/share/gramps/PluginMgr.pyc
-  /usr/share/gramps/PluginMgr.pyo
-  /usr/share/gramps/Plugins.py
-  /usr/share/gramps/Plugins.pyc
-  /usr/share/gramps/Plugins.pyo
+  /usr/share/gramps/Navigation.py
+  /usr/share/gramps/Navigation.pyc
+  /usr/share/gramps/Navigation.pyo
+  /usr/share/gramps/PageView.py
+  /usr/share/gramps/PageView.pyc
+  /usr/share/gramps/PageView.pyo
+  /usr/share/gramps/PluginUtils/_Options.py
+  /usr/share/gramps/PluginUtils/_Options.pyc
+  /usr/share/gramps/PluginUtils/_Options.pyo
+  /usr/share/gramps/PluginUtils/_PluginMgr.py
+  /usr/share/gramps/PluginUtils/_PluginMgr.pyc
+  /usr/share/gramps/PluginUtils/_PluginMgr.pyo
+  /usr/share/gramps/PluginUtils/_PluginStatus.py
+  /usr/share/gramps/PluginUtils/_PluginStatus.pyc
+  /usr/share/gramps/PluginUtils/_PluginStatus.pyo
+  /usr/share/gramps/PluginUtils/_Plugins.py
+  /usr/share/gramps/PluginUtils/_Plugins.pyc
+  /usr/share/gramps/PluginUtils/_Plugins.pyo
+  /usr/share/gramps/PluginUtils/_Tool.py
+  /usr/share/gramps/PluginUtils/_Tool.pyc
+  /usr/share/gramps/PluginUtils/_Tool.pyo
+  /usr/share/gramps/PluginUtils/__init__.py
+  /usr/share/gramps/PluginUtils/__init__.pyc
+  /usr/share/gramps/PluginUtils/__init__.pyo
   /usr/share/gramps/QuestionDialog.py
   /usr/share/gramps/QuestionDialog.pyc
   /usr/share/gramps/QuestionDialog.pyo
-  /usr/share/gramps/ReadGedcom.py
-  /usr/share/gramps/ReadGedcom.pyc
-  /usr/share/gramps/ReadGedcom.pyo
-  /usr/share/gramps/ReadGrdb.py
-  /usr/share/gramps/ReadGrdb.pyc
-  /usr/share/gramps/ReadGrdb.pyo
-  /usr/share/gramps/ReadXML.py
-  /usr/share/gramps/ReadXML.pyc
-  /usr/share/gramps/ReadXML.pyo
   /usr/share/gramps/RecentFiles.py
   /usr/share/gramps/RecentFiles.pyc
   /usr/share/gramps/RecentFiles.pyo
-  /usr/share/gramps/RelImage.py
-  /usr/share/gramps/RelImage.pyc
-  /usr/share/gramps/RelImage.pyo
-  /usr/share/gramps/RelLib.py
-  /usr/share/gramps/RelLib.pyc
-  /usr/share/gramps/RelLib.pyo
+  /usr/share/gramps/RelLib/_Address.py
+  /usr/share/gramps/RelLib/_Address.pyc
+  /usr/share/gramps/RelLib/_Address.pyo
+  /usr/share/gramps/RelLib/_AddressBase.py
+  /usr/share/gramps/RelLib/_AddressBase.pyc
+  /usr/share/gramps/RelLib/_AddressBase.pyo
+  /usr/share/gramps/RelLib/_Attribute.py
+  /usr/share/gramps/RelLib/_Attribute.pyc
+  /usr/share/gramps/RelLib/_Attribute.pyo
+  /usr/share/gramps/RelLib/_AttributeBase.py
+  /usr/share/gramps/RelLib/_AttributeBase.pyc
+  /usr/share/gramps/RelLib/_AttributeBase.pyo
+  /usr/share/gramps/RelLib/_AttributeType.py
+  /usr/share/gramps/RelLib/_AttributeType.pyc
+  /usr/share/gramps/RelLib/_AttributeType.pyo
+  /usr/share/gramps/RelLib/_BaseObject.py
+  /usr/share/gramps/RelLib/_BaseObject.pyc
+  /usr/share/gramps/RelLib/_BaseObject.pyo
+  /usr/share/gramps/RelLib/_CalSdn.py
+  /usr/share/gramps/RelLib/_CalSdn.pyc
+  /usr/share/gramps/RelLib/_CalSdn.pyo
+  /usr/share/gramps/RelLib/_ChildRef.py
+  /usr/share/gramps/RelLib/_ChildRef.pyc
+  /usr/share/gramps/RelLib/_ChildRef.pyo
+  /usr/share/gramps/RelLib/_ChildRefType.py
+  /usr/share/gramps/RelLib/_ChildRefType.pyc
+  /usr/share/gramps/RelLib/_ChildRefType.pyo
+  /usr/share/gramps/RelLib/_Date.py
+  /usr/share/gramps/RelLib/_Date.pyc
+  /usr/share/gramps/RelLib/_Date.pyo
+  /usr/share/gramps/RelLib/_DateBase.py
+  /usr/share/gramps/RelLib/_DateBase.pyc
+  /usr/share/gramps/RelLib/_DateBase.pyo
+  /usr/share/gramps/RelLib/_Event.py
+  /usr/share/gramps/RelLib/_Event.pyc
+  /usr/share/gramps/RelLib/_Event.pyo
+  /usr/share/gramps/RelLib/_EventRef.py
+  /usr/share/gramps/RelLib/_EventRef.pyc
+  /usr/share/gramps/RelLib/_EventRef.pyo
+  /usr/share/gramps/RelLib/_EventRoleType.py
+  /usr/share/gramps/RelLib/_EventRoleType.pyc
+  /usr/share/gramps/RelLib/_EventRoleType.pyo
+  /usr/share/gramps/RelLib/_EventType.py
+  /usr/share/gramps/RelLib/_EventType.pyc
+  /usr/share/gramps/RelLib/_EventType.pyo
+  /usr/share/gramps/RelLib/_Family.py
+  /usr/share/gramps/RelLib/_Family.pyc
+  /usr/share/gramps/RelLib/_Family.pyo
+  /usr/share/gramps/RelLib/_FamilyRelType.py
+  /usr/share/gramps/RelLib/_FamilyRelType.pyc
+  /usr/share/gramps/RelLib/_FamilyRelType.pyo
+  /usr/share/gramps/RelLib/_GenderStats.py
+  /usr/share/gramps/RelLib/_GenderStats.pyc
+  /usr/share/gramps/RelLib/_GenderStats.pyo
+  /usr/share/gramps/RelLib/_GrampsType.py
+  /usr/share/gramps/RelLib/_GrampsType.pyc
+  /usr/share/gramps/RelLib/_GrampsType.pyo
+  /usr/share/gramps/RelLib/_LdsOrd.py
+  /usr/share/gramps/RelLib/_LdsOrd.pyc
+  /usr/share/gramps/RelLib/_LdsOrd.pyo
+  /usr/share/gramps/RelLib/_LdsOrdBase.py
+  /usr/share/gramps/RelLib/_LdsOrdBase.pyc
+  /usr/share/gramps/RelLib/_LdsOrdBase.pyo
+  /usr/share/gramps/RelLib/_Location.py
+  /usr/share/gramps/RelLib/_Location.pyc
+  /usr/share/gramps/RelLib/_Location.pyo
+  /usr/share/gramps/RelLib/_LocationBase.py
+  /usr/share/gramps/RelLib/_LocationBase.pyc
+  /usr/share/gramps/RelLib/_LocationBase.pyo
+  /usr/share/gramps/RelLib/_MarkerType.py
+  /usr/share/gramps/RelLib/_MarkerType.pyc
+  /usr/share/gramps/RelLib/_MarkerType.pyo
+  /usr/share/gramps/RelLib/_MediaBase.py
+  /usr/share/gramps/RelLib/_MediaBase.pyc
+  /usr/share/gramps/RelLib/_MediaBase.pyo
+  /usr/share/gramps/RelLib/_MediaObject.py
+  /usr/share/gramps/RelLib/_MediaObject.pyc
+  /usr/share/gramps/RelLib/_MediaObject.pyo
+  /usr/share/gramps/RelLib/_MediaRef.py
+  /usr/share/gramps/RelLib/_MediaRef.pyc
+  /usr/share/gramps/RelLib/_MediaRef.pyo
+  /usr/share/gramps/RelLib/_Name.py
+  /usr/share/gramps/RelLib/_Name.pyc
+  /usr/share/gramps/RelLib/_Name.pyo
+  /usr/share/gramps/RelLib/_NameType.py
+  /usr/share/gramps/RelLib/_NameType.pyc
+  /usr/share/gramps/RelLib/_NameType.pyo
+  /usr/share/gramps/RelLib/_Note.py
+  /usr/share/gramps/RelLib/_Note.pyc
+  /usr/share/gramps/RelLib/_Note.pyo
+  /usr/share/gramps/RelLib/_NoteBase.py
+  /usr/share/gramps/RelLib/_NoteBase.pyc
+  /usr/share/gramps/RelLib/_NoteBase.pyo
+  /usr/share/gramps/RelLib/_Person.py
+  /usr/share/gramps/RelLib/_Person.pyc
+  /usr/share/gramps/RelLib/_Person.pyo
+  /usr/share/gramps/RelLib/_PersonRef.py
+  /usr/share/gramps/RelLib/_PersonRef.pyc
+  /usr/share/gramps/RelLib/_PersonRef.pyo
+  /usr/share/gramps/RelLib/_Place.py
+  /usr/share/gramps/RelLib/_Place.pyc
+  /usr/share/gramps/RelLib/_Place.pyo
+  /usr/share/gramps/RelLib/_PlaceBase.py
+  /usr/share/gramps/RelLib/_PlaceBase.pyc
+  /usr/share/gramps/RelLib/_PlaceBase.pyo
+  /usr/share/gramps/RelLib/_PrimaryObject.py
+  /usr/share/gramps/RelLib/_PrimaryObject.pyc
+  /usr/share/gramps/RelLib/_PrimaryObject.pyo
+  /usr/share/gramps/RelLib/_PrivacyBase.py
+  /usr/share/gramps/RelLib/_PrivacyBase.pyc
+  /usr/share/gramps/RelLib/_PrivacyBase.pyo
+  /usr/share/gramps/RelLib/_PrivateSourceNote.py
+  /usr/share/gramps/RelLib/_PrivateSourceNote.pyc
+  /usr/share/gramps/RelLib/_PrivateSourceNote.pyo
+  /usr/share/gramps/RelLib/_RefBase.py
+  /usr/share/gramps/RelLib/_RefBase.pyc
+  /usr/share/gramps/RelLib/_RefBase.pyo
+  /usr/share/gramps/RelLib/_RepoRef.py
+  /usr/share/gramps/RelLib/_RepoRef.pyc
+  /usr/share/gramps/RelLib/_RepoRef.pyo
+  /usr/share/gramps/RelLib/_Repository.py
+  /usr/share/gramps/RelLib/_Repository.pyc
+  /usr/share/gramps/RelLib/_Repository.pyo
+  /usr/share/gramps/RelLib/_RepositoryType.py
+  /usr/share/gramps/RelLib/_RepositoryType.pyc
+  /usr/share/gramps/RelLib/_RepositoryType.pyo
+  /usr/share/gramps/RelLib/_Researcher.py
+  /usr/share/gramps/RelLib/_Researcher.pyc
+  /usr/share/gramps/RelLib/_Researcher.pyo
+  /usr/share/gramps/RelLib/_SecondaryObject.py
+  /usr/share/gramps/RelLib/_SecondaryObject.pyc
+  /usr/share/gramps/RelLib/_SecondaryObject.pyo
+  /usr/share/gramps/RelLib/_Source.py
+  /usr/share/gramps/RelLib/_Source.pyc
+  /usr/share/gramps/RelLib/_Source.pyo
+  /usr/share/gramps/RelLib/_SourceBase.py
+  /usr/share/gramps/RelLib/_SourceBase.pyc
+  /usr/share/gramps/RelLib/_SourceBase.pyo
+  /usr/share/gramps/RelLib/_SourceMediaType.py
+  /usr/share/gramps/RelLib/_SourceMediaType.pyc
+  /usr/share/gramps/RelLib/_SourceMediaType.pyo
+  /usr/share/gramps/RelLib/_SourceNote.py
+  /usr/share/gramps/RelLib/_SourceNote.pyc
+  /usr/share/gramps/RelLib/_SourceNote.pyo
+  /usr/share/gramps/RelLib/_SourceRef.py
+  /usr/share/gramps/RelLib/_SourceRef.pyc
+  /usr/share/gramps/RelLib/_SourceRef.pyo
+  /usr/share/gramps/RelLib/_Url.py
+  /usr/share/gramps/RelLib/_Url.pyc
+  /usr/share/gramps/RelLib/_Url.pyo
+  /usr/share/gramps/RelLib/_UrlBase.py
+  /usr/share/gramps/RelLib/_UrlBase.pyc
+  /usr/share/gramps/RelLib/_UrlBase.pyo
+  /usr/share/gramps/RelLib/_UrlType.py
+  /usr/share/gramps/RelLib/_UrlType.pyc
+  /usr/share/gramps/RelLib/_UrlType.pyo
+  /usr/share/gramps/RelLib/_Witness.py
+  /usr/share/gramps/RelLib/_Witness.pyc
+  /usr/share/gramps/RelLib/_Witness.pyo
+  /usr/share/gramps/RelLib/__init__.py
+  /usr/share/gramps/RelLib/__init__.pyc
+  /usr/share/gramps/RelLib/__init__.pyo
   /usr/share/gramps/Relationship.py
   /usr/share/gramps/Relationship.pyc
   /usr/share/gramps/Relationship.pyo
-  /usr/share/gramps/Report.py
-  /usr/share/gramps/Report.pyc
-  /usr/share/gramps/Report.pyo
-  /usr/share/gramps/ReportOptions.py
-  /usr/share/gramps/ReportOptions.pyc
-  /usr/share/gramps/ReportOptions.pyo
-  /usr/share/gramps/ReportUtils.py
-  /usr/share/gramps/ReportUtils.pyc
-  /usr/share/gramps/ReportUtils.pyo
-  /usr/share/gramps/SelectChild.py
-  /usr/share/gramps/SelectChild.pyc
-  /usr/share/gramps/SelectChild.pyo
-  /usr/share/gramps/SelectObject.py
-  /usr/share/gramps/SelectObject.pyc
-  /usr/share/gramps/SelectObject.pyo
-  /usr/share/gramps/SelectPerson.py
-  /usr/share/gramps/SelectPerson.pyc
-  /usr/share/gramps/SelectPerson.pyo
+  /usr/share/gramps/ReportBase/_BareReportDialog.py
+  /usr/share/gramps/ReportBase/_BareReportDialog.pyc
+  /usr/share/gramps/ReportBase/_BareReportDialog.pyo
+  /usr/share/gramps/ReportBase/_BookFormatComboBox.py
+  /usr/share/gramps/ReportBase/_BookFormatComboBox.pyc
+  /usr/share/gramps/ReportBase/_BookFormatComboBox.pyo
+  /usr/share/gramps/ReportBase/_CommandLineReport.py
+  /usr/share/gramps/ReportBase/_CommandLineReport.pyc
+  /usr/share/gramps/ReportBase/_CommandLineReport.pyo
+  /usr/share/gramps/ReportBase/_Constants.py
+  /usr/share/gramps/ReportBase/_Constants.pyc
+  /usr/share/gramps/ReportBase/_Constants.pyo
+  /usr/share/gramps/ReportBase/_DrawFormatComboBox.py
+  /usr/share/gramps/ReportBase/_DrawFormatComboBox.pyc
+  /usr/share/gramps/ReportBase/_DrawFormatComboBox.pyo
+  /usr/share/gramps/ReportBase/_DrawReportDialog.py
+  /usr/share/gramps/ReportBase/_DrawReportDialog.pyc
+  /usr/share/gramps/ReportBase/_DrawReportDialog.pyo
+  /usr/share/gramps/ReportBase/_FileEntry.py
+  /usr/share/gramps/ReportBase/_FileEntry.pyc
+  /usr/share/gramps/ReportBase/_FileEntry.pyo
+  /usr/share/gramps/ReportBase/_PaperMenu.py
+  /usr/share/gramps/ReportBase/_PaperMenu.pyc
+  /usr/share/gramps/ReportBase/_PaperMenu.pyo
+  /usr/share/gramps/ReportBase/_PrintTools.py
+  /usr/share/gramps/ReportBase/_PrintTools.pyc
+  /usr/share/gramps/ReportBase/_PrintTools.pyo
+  /usr/share/gramps/ReportBase/_Report.py
+  /usr/share/gramps/ReportBase/_Report.pyc
+  /usr/share/gramps/ReportBase/_Report.pyo
+  /usr/share/gramps/ReportBase/_ReportDialog.py
+  /usr/share/gramps/ReportBase/_ReportDialog.pyc
+  /usr/share/gramps/ReportBase/_ReportDialog.pyo
+  /usr/share/gramps/ReportBase/_ReportOptions.py
+  /usr/share/gramps/ReportBase/_ReportOptions.pyc
+  /usr/share/gramps/ReportBase/_ReportOptions.pyo
+  /usr/share/gramps/ReportBase/_ReportUtils.py
+  /usr/share/gramps/ReportBase/_ReportUtils.pyc
+  /usr/share/gramps/ReportBase/_ReportUtils.pyo
+  /usr/share/gramps/ReportBase/_StyleComboBox.py
+  /usr/share/gramps/ReportBase/_StyleComboBox.pyc
+  /usr/share/gramps/ReportBase/_StyleComboBox.pyo
+  /usr/share/gramps/ReportBase/_StyleEditor.py
+  /usr/share/gramps/ReportBase/_StyleEditor.pyc
+  /usr/share/gramps/ReportBase/_StyleEditor.pyo
+  /usr/share/gramps/ReportBase/_TemplateParser.py
+  /usr/share/gramps/ReportBase/_TemplateParser.pyc
+  /usr/share/gramps/ReportBase/_TemplateParser.pyo
+  /usr/share/gramps/ReportBase/_TextFormatComboBox.py
+  /usr/share/gramps/ReportBase/_TextFormatComboBox.pyc
+  /usr/share/gramps/ReportBase/_TextFormatComboBox.pyo
+  /usr/share/gramps/ReportBase/_TextReportDialog.py
+  /usr/share/gramps/ReportBase/_TextReportDialog.pyc
+  /usr/share/gramps/ReportBase/_TextReportDialog.pyo
+  /usr/share/gramps/ReportBase/__init__.py
+  /usr/share/gramps/ReportBase/__init__.pyc
+  /usr/share/gramps/ReportBase/__init__.pyo
+  /usr/share/gramps/ScratchPad.py
+  /usr/share/gramps/ScratchPad.pyc
+  /usr/share/gramps/ScratchPad.pyo
+  /usr/share/gramps/Selectors/_BaseSelector.py
+  /usr/share/gramps/Selectors/_BaseSelector.pyc
+  /usr/share/gramps/Selectors/_BaseSelector.pyo
+  /usr/share/gramps/Selectors/_SelectEvent.py
+  /usr/share/gramps/Selectors/_SelectEvent.pyc
+  /usr/share/gramps/Selectors/_SelectEvent.pyo
+  /usr/share/gramps/Selectors/_SelectFamily.py
+  /usr/share/gramps/Selectors/_SelectFamily.pyc
+  /usr/share/gramps/Selectors/_SelectFamily.pyo
+  /usr/share/gramps/Selectors/_SelectObject.py
+  /usr/share/gramps/Selectors/_SelectObject.pyc
+  /usr/share/gramps/Selectors/_SelectObject.pyo
+  /usr/share/gramps/Selectors/_SelectPerson.py
+  /usr/share/gramps/Selectors/_SelectPerson.pyc
+  /usr/share/gramps/Selectors/_SelectPerson.pyo
+  /usr/share/gramps/Selectors/_SelectPlace.py
+  /usr/share/gramps/Selectors/_SelectPlace.pyc
+  /usr/share/gramps/Selectors/_SelectPlace.pyo
+  /usr/share/gramps/Selectors/_SelectRepository.py
+  /usr/share/gramps/Selectors/_SelectRepository.pyc
+  /usr/share/gramps/Selectors/_SelectRepository.pyo
+  /usr/share/gramps/Selectors/_SelectSource.py
+  /usr/share/gramps/Selectors/_SelectSource.pyc
+  /usr/share/gramps/Selectors/_SelectSource.pyo
+  /usr/share/gramps/Selectors/_SelectorExceptions.py
+  /usr/share/gramps/Selectors/_SelectorExceptions.pyc
+  /usr/share/gramps/Selectors/_SelectorExceptions.pyo
+  /usr/share/gramps/Selectors/_SelectorFactory.py
+  /usr/share/gramps/Selectors/_SelectorFactory.pyc
+  /usr/share/gramps/Selectors/_SelectorFactory.pyo
+  /usr/share/gramps/Selectors/__init__.py
+  /usr/share/gramps/Selectors/__init__.pyc
+  /usr/share/gramps/Selectors/__init__.pyo
   /usr/share/gramps/Sort.py
   /usr/share/gramps/Sort.pyc
   /usr/share/gramps/Sort.pyo
-  /usr/share/gramps/SourceView.py
-  /usr/share/gramps/SourceView.pyc
-  /usr/share/gramps/SourceView.pyo
-  /usr/share/gramps/Sources.py
-  /usr/share/gramps/Sources.pyc
-  /usr/share/gramps/Sources.pyo
   /usr/share/gramps/Spell.py
   /usr/share/gramps/Spell.pyc
   /usr/share/gramps/Spell.pyo
-  /usr/share/gramps/SpreadSheetDoc.py
-  /usr/share/gramps/SpreadSheetDoc.pyc
-  /usr/share/gramps/SpreadSheetDoc.pyo
   /usr/share/gramps/StartupDialog.py
   /usr/share/gramps/StartupDialog.pyc
   /usr/share/gramps/StartupDialog.pyo
-  /usr/share/gramps/StyleEditor.py
-  /usr/share/gramps/StyleEditor.pyc
-  /usr/share/gramps/StyleEditor.pyo
   /usr/share/gramps/SubstKeywords.py
   /usr/share/gramps/SubstKeywords.pyc
   /usr/share/gramps/SubstKeywords.pyo
-  /usr/share/gramps/TarFile.py
-  /usr/share/gramps/TarFile.pyc
-  /usr/share/gramps/TarFile.pyo
   /usr/share/gramps/TipOfDay.py
   /usr/share/gramps/TipOfDay.pyc
   /usr/share/gramps/TipOfDay.pyo
-  /usr/share/gramps/Tool.py
-  /usr/share/gramps/Tool.pyc
-  /usr/share/gramps/Tool.pyo
-  /usr/share/gramps/TransTable.py
-  /usr/share/gramps/TransTable.pyc
-  /usr/share/gramps/TransTable.pyo
+  /usr/share/gramps/ToolTips.py
+  /usr/share/gramps/ToolTips.pyc
+  /usr/share/gramps/ToolTips.pyo
   /usr/share/gramps/TransUtils.py
   /usr/share/gramps/TransUtils.pyc
   /usr/share/gramps/TransUtils.pyo
   /usr/share/gramps/TreeTips.py
   /usr/share/gramps/TreeTips.pyc
   /usr/share/gramps/TreeTips.pyo
-  /usr/share/gramps/UrlEdit.py
-  /usr/share/gramps/UrlEdit.pyc
-  /usr/share/gramps/UrlEdit.pyo
+  /usr/share/gramps/UndoHistory.py
+  /usr/share/gramps/UndoHistory.pyc
+  /usr/share/gramps/UndoHistory.pyo
   /usr/share/gramps/Utils.py
   /usr/share/gramps/Utils.pyc
   /usr/share/gramps/Utils.pyo
-  /usr/share/gramps/WindowUtils.py
-  /usr/share/gramps/WindowUtils.pyc
-  /usr/share/gramps/WindowUtils.pyo
-  /usr/share/gramps/Witness.py
-  /usr/share/gramps/Witness.pyc
-  /usr/share/gramps/Witness.pyo
-  /usr/share/gramps/WriteGedcom.py
-  /usr/share/gramps/WriteGedcom.pyc
-  /usr/share/gramps/WriteGedcom.pyo
-  /usr/share/gramps/WriteGrdb.py
-  /usr/share/gramps/WriteGrdb.pyc
-  /usr/share/gramps/WriteGrdb.pyo
-  /usr/share/gramps/WriteXML.py
-  /usr/share/gramps/WriteXML.pyc
-  /usr/share/gramps/WriteXML.pyo
-  /usr/share/gramps/accent.py
-  /usr/share/gramps/accent.pyc
-  /usr/share/gramps/accent.pyo
+  /usr/share/gramps/ViewManager.py
+  /usr/share/gramps/ViewManager.pyc
+  /usr/share/gramps/ViewManager.pyo
   /usr/share/gramps/ansel_utf8.py
   /usr/share/gramps/ansel_utf8.pyc
   /usr/share/gramps/ansel_utf8.pyo
-  /usr/share/gramps/bad.png
-  /usr/share/gramps/caution.png
   /usr/share/gramps/const.py
   /usr/share/gramps/const.pyc
   /usr/share/gramps/const.pyo
-  /usr/share/gramps/data/document.png
   /usr/share/gramps/data/gedcom.xml
   /usr/share/gramps/data/main1.css
   /usr/share/gramps/data/main2.css
@@ -373,7 +1488,7 @@ Files included in the binary package:
   /usr/share/gramps/data/main5.css
   /usr/share/gramps/data/main6.css
   /usr/share/gramps/data/papersize.xml
-  /usr/share/gramps/data/somerights20.gif
+  /usr/share/gramps/data/system_filters.xml
   /usr/share/gramps/data/templates/blue_edge.tpkg
   /usr/share/gramps/data/templates/marble.tpkg
   /usr/share/gramps/data/templates/pink_marble.tpkg
@@ -381,33 +1496,6 @@ Files included in the binary package:
   /usr/share/gramps/data/templates/sky_border.tpkg
   /usr/share/gramps/data/templates/templates.xml
   /usr/share/gramps/data/tips.xml
-  /usr/share/gramps/dates/Date_de.py
-  /usr/share/gramps/dates/Date_de.pyc
-  /usr/share/gramps/dates/Date_de.pyo
-  /usr/share/gramps/dates/Date_es.py
-  /usr/share/gramps/dates/Date_es.pyc
-  /usr/share/gramps/dates/Date_es.pyo
-  /usr/share/gramps/dates/Date_fi.py
-  /usr/share/gramps/dates/Date_fi.pyc
-  /usr/share/gramps/dates/Date_fi.pyo
-  /usr/share/gramps/dates/Date_fr.py
-  /usr/share/gramps/dates/Date_fr.pyc
-  /usr/share/gramps/dates/Date_fr.pyo
-  /usr/share/gramps/dates/Date_lt.py
-  /usr/share/gramps/dates/Date_lt.pyc
-  /usr/share/gramps/dates/Date_lt.pyo
-  /usr/share/gramps/dates/Date_nl.py
-  /usr/share/gramps/dates/Date_nl.pyc
-  /usr/share/gramps/dates/Date_nl.pyo
-  /usr/share/gramps/dates/Date_ru.py
-  /usr/share/gramps/dates/Date_ru.pyc
-  /usr/share/gramps/dates/Date_ru.pyo
-  /usr/share/gramps/dates/Date_sk.py
-  /usr/share/gramps/dates/Date_sk.pyc
-  /usr/share/gramps/dates/Date_sk.pyo
-  /usr/share/gramps/dates/Date_sv.py
-  /usr/share/gramps/dates/Date_sv.pyc
-  /usr/share/gramps/dates/Date_sv.pyo
   /usr/share/gramps/docgen/AbiWord2Doc.py
   /usr/share/gramps/docgen/AbiWord2Doc.pyc
   /usr/share/gramps/docgen/AbiWord2Doc.pyo
@@ -429,6 +1517,9 @@ Files included in the binary package:
   /usr/share/gramps/docgen/ODFDoc.py
   /usr/share/gramps/docgen/ODFDoc.pyc
   /usr/share/gramps/docgen/ODFDoc.pyo
+  /usr/share/gramps/docgen/ODSDoc.py
+  /usr/share/gramps/docgen/ODSDoc.pyc
+  /usr/share/gramps/docgen/ODSDoc.pyo
   /usr/share/gramps/docgen/OpenOfficeDoc.py
   /usr/share/gramps/docgen/OpenOfficeDoc.pyc
   /usr/share/gramps/docgen/OpenOfficeDoc.pyo
@@ -444,11 +1535,12 @@ Files included in the binary package:
   /usr/share/gramps/docgen/RTFDoc.py
   /usr/share/gramps/docgen/RTFDoc.pyc
   /usr/share/gramps/docgen/RTFDoc.pyo
+  /usr/share/gramps/docgen/SpreadSheetDoc.py
+  /usr/share/gramps/docgen/SpreadSheetDoc.pyc
+  /usr/share/gramps/docgen/SpreadSheetDoc.pyo
   /usr/share/gramps/docgen/SvgDrawDoc.py
   /usr/share/gramps/docgen/SvgDrawDoc.pyc
   /usr/share/gramps/docgen/SvgDrawDoc.pyo
-  /usr/share/gramps/edit.png
-  /usr/share/gramps/edit_sm.png
   /usr/share/gramps/example/O0.jpg
   /usr/share/gramps/example/O1.jpg
   /usr/share/gramps/example/O2.jpg
@@ -456,239 +1548,64 @@ Files included in the binary package:
   /usr/share/gramps/example/O4.jpg
   /usr/share/gramps/example/O5.jpg
   /usr/share/gramps/example/data.gramps
-  /usr/share/gramps/family48.png
-  /usr/share/gramps/gedcomexport.glade
-  /usr/share/gramps/gedcomimport.glade
-  /usr/share/gramps/gnome/help/gramps/C/authors.xml
-  /usr/share/gramps/gnome/help/gramps/C/bugs.xml
-  /usr/share/gramps/gnome/help/gramps/C/cmdline.xml
-  /usr/share/gramps/gnome/help/gramps/C/cmdplug.xml
-  /usr/share/gramps/gnome/help/gramps/C/custom.xml
-  /usr/share/gramps/gnome/help/gramps/C/faq.xml
-  /usr/share/gramps/gnome/help/gramps/C/figures/bookreport.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/cfe-ar.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/cfe-df.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/column-editor.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/comp-people.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/date-selection.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-ad.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-an.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-at.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-bm.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-ev.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-media.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-person-addresses.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-person-attributes.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-person-events.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-person-gallery.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-person-internet.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-person-lds.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-person-names.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-person-notes.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-person-sources.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-person.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-plc.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-rel.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-si.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-src.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/edit-wi.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/export-druid.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/family-alt.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/family.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/find-people.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/first-open.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/gedcom-export-progress.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/gedcom-export.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/gedcom-import.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/mainwin.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/media.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/merge-people.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/merge-plc.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/merge-src.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/missing-media.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/noside-nofilt.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/pedigree-anchor.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/pedigree-child-cut.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/pedigree-siblings-cut.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/pedigree.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/places.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/prefs.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/researcher.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/scratch-pad.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/side-filt.png
-  /usr/share/gramps/gnome/help/gramps/C/figures/sources.png
-  /usr/share/gramps/gnome/help/gramps/C/filtref.xml
-  /usr/share/gramps/gnome/help/gramps/C/getstart.xml
-  /usr/share/gramps/gnome/help/gramps/C/gramps-manual.xml
-  /usr/share/gramps/gnome/help/gramps/C/keybind.xml
-  /usr/share/gramps/gnome/help/gramps/C/legal.xml
-  /usr/share/gramps/gnome/help/gramps/C/mainwin.xml
-  /usr/share/gramps/gnome/help/gramps/C/preface.xml
-  /usr/share/gramps/gnome/help/gramps/C/usage.xml
-  /usr/share/gramps/gnome/help/gramps/fr/authors.xml
-  /usr/share/gramps/gnome/help/gramps/fr/bugs.xml
-  /usr/share/gramps/gnome/help/gramps/fr/cmdline.xml
-  /usr/share/gramps/gnome/help/gramps/fr/cmdplug.xml
-  /usr/share/gramps/gnome/help/gramps/fr/custom.xml
-  /usr/share/gramps/gnome/help/gramps/fr/faq.xml
-  /usr/share/gramps/gnome/help/gramps/fr/figures/bookreport.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/cfe-ar.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/cfe-df.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/column-editor.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/comp-people.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/date-selection.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-ad.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-an.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-at.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-bm.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-ev.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-media.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-person-addresses.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-person-attributes.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-person-events.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-person-gallery.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-person-internet.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-person-lds.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-person-names.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-person-notes.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-person-sources.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-person.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-plc.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-rel.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-si.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-src.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/edit-wi.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/export-druid.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/family-alt.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/family.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/find-people.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/first-open.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/gedcom-export-progress.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/gedcom-export.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/gedcom-import.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/mainwin.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/media.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/merge-people.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/merge-plc.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/merge-src.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/missing-media.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/noside-nofilt.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/pedigree-anchor.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/pedigree-child-cut.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/pedigree-siblings-cut.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/pedigree.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/places.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/prefs.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/researcher.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/scratch-pad.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/side-filt.png
-  /usr/share/gramps/gnome/help/gramps/fr/figures/sources.png
-  /usr/share/gramps/gnome/help/gramps/fr/filtref.xml
-  /usr/share/gramps/gnome/help/gramps/fr/getstart.xml
-  /usr/share/gramps/gnome/help/gramps/fr/gramps-manual.xml
-  /usr/share/gramps/gnome/help/gramps/fr/keybind.xml
-  /usr/share/gramps/gnome/help/gramps/fr/legal.xml
-  /usr/share/gramps/gnome/help/gramps/fr/mainwin.xml
-  /usr/share/gramps/gnome/help/gramps/fr/preface.xml
-  /usr/share/gramps/gnome/help/gramps/fr/usage.xml
-  /usr/share/gramps/gnome/help/gramps/gramps
-  /usr/share/gramps/gnome/help/gramps/sk/authors.xml
-  /usr/share/gramps/gnome/help/gramps/sk/bugs.xml
-  /usr/share/gramps/gnome/help/gramps/sk/cmdline.xml
-  /usr/share/gramps/gnome/help/gramps/sk/cmdplug.xml
-  /usr/share/gramps/gnome/help/gramps/sk/custom.xml
-  /usr/share/gramps/gnome/help/gramps/sk/faq.xml
-  /usr/share/gramps/gnome/help/gramps/sk/figures/bookreport.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/cfe-ar.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/cfe-df.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/column-editor.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/comp-people.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/date-selection.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-ad.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-an.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-at.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-bm.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-ev.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-media.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-person-addresses.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-person-attributes.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-person-events.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-person-gallery.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-person-internet.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-person-lds.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-person-names.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-person-notes.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-person-sources.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-person.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-plc.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-rel.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-si.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-src.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/edit-wi.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/export-druid.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/family-alt.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/family.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/find-people.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/first-open.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/gedcom-export-progress.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/gedcom-export.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/gedcom-import.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/mainwin.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/media.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/merge-people.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/merge-plc.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/merge-src.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/missing-media.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/noside-nofilt.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/pedigree-anchor.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/pedigree-child-cut.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/pedigree-siblings-cut.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/pedigree.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/places.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/prefs.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/researcher.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/scratch-pad.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/side-filt.png
-  /usr/share/gramps/gnome/help/gramps/sk/figures/sources.png
-  /usr/share/gramps/gnome/help/gramps/sk/filtref.xml
-  /usr/share/gramps/gnome/help/gramps/sk/getstart.xml
-  /usr/share/gramps/gnome/help/gramps/sk/gramps-manual.xml
-  /usr/share/gramps/gnome/help/gramps/sk/keybind.xml
-  /usr/share/gramps/gnome/help/gramps/sk/legal.xml
-  /usr/share/gramps/gnome/help/gramps/sk/mainwin.xml
-  /usr/share/gramps/gnome/help/gramps/sk/preface.xml
-  /usr/share/gramps/gnome/help/gramps/sk/usage.xml
-  /usr/share/gramps/good.png
-  /usr/share/gramps/gramps.glade
-  /usr/share/gramps/gramps.png
+  /usr/share/gramps/glade/edit_person.glade
+  /usr/share/gramps/glade/gramps.glade
+  /usr/share/gramps/glade/mergedata.glade
+  /usr/share/gramps/glade/plugins.glade
+  /usr/share/gramps/glade/rule.glade
+  /usr/share/gramps/glade/scratchpad.glade
   /usr/share/gramps/gramps.py
   /usr/share/gramps/gramps.pyc
   /usr/share/gramps/gramps.pyo
   /usr/share/gramps/gramps_main.py
   /usr/share/gramps/gramps_main.pyc
   /usr/share/gramps/gramps_main.pyo
-  /usr/share/gramps/home.png
-  /usr/share/gramps/latin_ansel.py
-  /usr/share/gramps/latin_ansel.pyc
-  /usr/share/gramps/latin_ansel.pyo
-  /usr/share/gramps/logo.png
-  /usr/share/gramps/media.png
-  /usr/share/gramps/mergedata.glade
-  /usr/share/gramps/people48.png
-  /usr/share/gramps/place.png
-  /usr/share/gramps/plugins.glade
-  /usr/share/gramps/plugins/AncestorChart.py
-  /usr/share/gramps/plugins/AncestorChart.pyc
-  /usr/share/gramps/plugins/AncestorChart.pyo
+  /usr/share/gramps/images/bad.png
+  /usr/share/gramps/images/caution.png
+  /usr/share/gramps/images/document.png
+  /usr/share/gramps/images/events.png
+  /usr/share/gramps/images/events.svg
+  /usr/share/gramps/images/flist.png
+  /usr/share/gramps/images/flist.svg
+  /usr/share/gramps/images/good.png
+  /usr/share/gramps/images/gramps.png
+  /usr/share/gramps/images/locked.png
+  /usr/share/gramps/images/logo.png
+  /usr/share/gramps/images/media.png
+  /usr/share/gramps/images/media.svg
+  /usr/share/gramps/images/ped24.png
+  /usr/share/gramps/images/person.png
+  /usr/share/gramps/images/person.svg
+  /usr/share/gramps/images/place.png
+  /usr/share/gramps/images/place.svg
+  /usr/share/gramps/images/relation.svg
+  /usr/share/gramps/images/reports.png
+  /usr/share/gramps/images/reports.svg
+  /usr/share/gramps/images/repos.png
+  /usr/share/gramps/images/somerights20.gif
+  /usr/share/gramps/images/sources.png
+  /usr/share/gramps/images/sources.svg
+  /usr/share/gramps/images/splash.jpg
+  /usr/share/gramps/images/stock_add-bookmark.png
+  /usr/share/gramps/images/stock_bookmark.png
+  /usr/share/gramps/images/stock_delete-bookmark.png
+  /usr/share/gramps/images/stock_edit-bookmark.png
+  /usr/share/gramps/images/stock_export.png
+  /usr/share/gramps/images/stock_insert-url.png
+  /usr/share/gramps/images/stock_link.png
+  /usr/share/gramps/images/stock_lock-open.png
+  /usr/share/gramps/images/stock_lock.png
+  /usr/share/gramps/images/stock_new-html.png
+  /usr/share/gramps/images/stock_notes.png
+  /usr/share/gramps/images/stock_undo-history.png
+  /usr/share/gramps/images/tools.png
+  /usr/share/gramps/images/tools.svg
   /usr/share/gramps/plugins/AncestorChart2.py
   /usr/share/gramps/plugins/AncestorChart2.pyc
   /usr/share/gramps/plugins/AncestorChart2.pyo
   /usr/share/gramps/plugins/AncestorReport.py
   /usr/share/gramps/plugins/AncestorReport.pyc
   /usr/share/gramps/plugins/AncestorReport.pyo
-  /usr/share/gramps/plugins/Ancestors.py
-  /usr/share/gramps/plugins/Ancestors.pyc
-  /usr/share/gramps/plugins/Ancestors.pyo
   /usr/share/gramps/plugins/BookReport.py
   /usr/share/gramps/plugins/BookReport.pyc
   /usr/share/gramps/plugins/BookReport.pyo
@@ -713,9 +1630,6 @@ Files included in the binary package:
   /usr/share/gramps/plugins/CustomBookText.py
   /usr/share/gramps/plugins/CustomBookText.pyc
   /usr/share/gramps/plugins/CustomBookText.pyo
-  /usr/share/gramps/plugins/DesGraph.py
-  /usr/share/gramps/plugins/DesGraph.pyc
-  /usr/share/gramps/plugins/DesGraph.pyo
   /usr/share/gramps/plugins/Desbrowser.py
   /usr/share/gramps/plugins/Desbrowser.pyc
   /usr/share/gramps/plugins/Desbrowser.pyo
@@ -749,15 +1663,9 @@ Files included in the binary package:
   /usr/share/gramps/plugins/FanChart.py
   /usr/share/gramps/plugins/FanChart.pyc
   /usr/share/gramps/plugins/FanChart.pyo
-  /usr/share/gramps/plugins/FilterEditor.py
-  /usr/share/gramps/plugins/FilterEditor.pyc
-  /usr/share/gramps/plugins/FilterEditor.pyo
-  /usr/share/gramps/plugins/FtmStyleAncestors.py
-  /usr/share/gramps/plugins/FtmStyleAncestors.pyc
-  /usr/share/gramps/plugins/FtmStyleAncestors.pyo
-  /usr/share/gramps/plugins/FtmStyleDescendants.py
-  /usr/share/gramps/plugins/FtmStyleDescendants.pyc
-  /usr/share/gramps/plugins/FtmStyleDescendants.pyo
+  /usr/share/gramps/plugins/FindDupes.py
+  /usr/share/gramps/plugins/FindDupes.pyc
+  /usr/share/gramps/plugins/FindDupes.pyo
   /usr/share/gramps/plugins/GraphViz.py
   /usr/share/gramps/plugins/GraphViz.pyc
   /usr/share/gramps/plugins/GraphViz.pyo
@@ -770,18 +1678,15 @@ Files included in the binary package:
   /usr/share/gramps/plugins/IndivComplete.py
   /usr/share/gramps/plugins/IndivComplete.pyc
   /usr/share/gramps/plugins/IndivComplete.pyo
-  /usr/share/gramps/plugins/IndivSummary.py
-  /usr/share/gramps/plugins/IndivSummary.pyc
-  /usr/share/gramps/plugins/IndivSummary.pyo
   /usr/share/gramps/plugins/Leak.py
   /usr/share/gramps/plugins/Leak.pyc
   /usr/share/gramps/plugins/Leak.pyo
-  /usr/share/gramps/plugins/Merge.py
-  /usr/share/gramps/plugins/Merge.pyc
-  /usr/share/gramps/plugins/Merge.pyo
-  /usr/share/gramps/plugins/NavWebPage.py
-  /usr/share/gramps/plugins/NavWebPage.pyc
-  /usr/share/gramps/plugins/NavWebPage.pyo
+  /usr/share/gramps/plugins/MediaManager.py
+  /usr/share/gramps/plugins/MediaManager.pyc
+  /usr/share/gramps/plugins/MediaManager.pyo
+  /usr/share/gramps/plugins/NarrativeWeb.py
+  /usr/share/gramps/plugins/NarrativeWeb.pyc
+  /usr/share/gramps/plugins/NarrativeWeb.pyo
   /usr/share/gramps/plugins/PatchNames.py
   /usr/share/gramps/plugins/PatchNames.pyc
   /usr/share/gramps/plugins/PatchNames.pyo
@@ -797,9 +1702,6 @@ Files included in the binary package:
   /usr/share/gramps/plugins/ReorderIds.py
   /usr/share/gramps/plugins/ReorderIds.pyc
   /usr/share/gramps/plugins/ReorderIds.pyo
-  /usr/share/gramps/plugins/ScratchPad.py
-  /usr/share/gramps/plugins/ScratchPad.pyc
-  /usr/share/gramps/plugins/ScratchPad.pyo
   /usr/share/gramps/plugins/SimpleBookTitle.py
   /usr/share/gramps/plugins/SimpleBookTitle.pyc
   /usr/share/gramps/plugins/SimpleBookTitle.pyo
@@ -818,9 +1720,6 @@ Files included in the binary package:
   /usr/share/gramps/plugins/Verify.py
   /usr/share/gramps/plugins/Verify.pyc
   /usr/share/gramps/plugins/Verify.pyo
-  /usr/share/gramps/plugins/WebPage.py
-  /usr/share/gramps/plugins/WebPage.pyc
-  /usr/share/gramps/plugins/WebPage.pyo
   /usr/share/gramps/plugins/WriteCD.py
   /usr/share/gramps/plugins/WriteCD.pyc
   /usr/share/gramps/plugins/WriteCD.pyo
@@ -846,6 +1745,9 @@ Files included in the binary package:
   /usr/share/gramps/plugins/leak.glade
   /usr/share/gramps/plugins/merge.glade
   /usr/share/gramps/plugins/patchnames.glade
+  /usr/share/gramps/plugins/rel_cs.py
+  /usr/share/gramps/plugins/rel_cs.pyc
+  /usr/share/gramps/plugins/rel_cs.pyo
   /usr/share/gramps/plugins/rel_da.py
   /usr/share/gramps/plugins/rel_da.pyc
   /usr/share/gramps/plugins/rel_da.pyo
@@ -870,28 +1772,28 @@ Files included in the binary package:
   /usr/share/gramps/plugins/rel_no.py
   /usr/share/gramps/plugins/rel_no.pyc
   /usr/share/gramps/plugins/rel_no.pyo
+  /usr/share/gramps/plugins/rel_pl.py
+  /usr/share/gramps/plugins/rel_pl.pyc
+  /usr/share/gramps/plugins/rel_pl.pyo
   /usr/share/gramps/plugins/rel_ru.py
   /usr/share/gramps/plugins/rel_ru.pyc
   /usr/share/gramps/plugins/rel_ru.pyo
+  /usr/share/gramps/plugins/rel_sk.py
+  /usr/share/gramps/plugins/rel_sk.pyc
+  /usr/share/gramps/plugins/rel_sk.pyo
   /usr/share/gramps/plugins/rel_sv.py
   /usr/share/gramps/plugins/rel_sv.pyc
   /usr/share/gramps/plugins/rel_sv.pyo
   /usr/share/gramps/plugins/relcalc.glade
-  /usr/share/gramps/plugins/scratchpad.glade
   /usr/share/gramps/plugins/soundex.glade
-  /usr/share/gramps/plugins/stock_link.png
   /usr/share/gramps/plugins/summary.glade
   /usr/share/gramps/plugins/vcalendarexport.glade
   /usr/share/gramps/plugins/vcardexport.glade
   /usr/share/gramps/plugins/verify.glade
   /usr/share/gramps/plugins/writeftree.glade
-  /usr/share/gramps/rule.glade
   /usr/share/gramps/soundex.py
   /usr/share/gramps/soundex.pyc
   /usr/share/gramps/soundex.pyo
-  /usr/share/gramps/sources.png
-  /usr/share/gramps/splash.jpg
-  /usr/share/gramps/tools.png
   /usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gedcom.png
   /usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-geneweb.png
   /usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gramps-package.png
@@ -922,13 +1824,15 @@ Files included in the binary package:
   /usr/share/mime-info/gramps.keys
   /usr/share/mime-info/gramps.mime
   /usr/share/mime/packages/gramps.xml
-  /usr/share/omf/gramps/gramps-manual-C.omf
-  /usr/share/omf/gramps/gramps-manual-fr.omf
-  /usr/share/omf/gramps/gramps-manual-sk.omf
+  /usr/share/omf/gramps/gramps-C.omf
+  /usr/share/omf/gramps/gramps-fr.omf
 
 --------------------
 
 Port Notes:
+
+----- version 2.2.1-1 -----
+Major version bump.
 
 ----- version 2.0.11-1 -----
 Version bump.
