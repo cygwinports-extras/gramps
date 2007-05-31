@@ -6,22 +6,21 @@ allows you to store, edit, and research genealogical data, with similar
 functionality to other genealogical programs.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  pygconf2-2.16.2-1
-  pygnome2-2.16.2-1
-  pygnomecanvas2-2.16.2-1
-  pygnomevfs2-2.16.2-1
-  pygobject2-2.12.3-1
-  pygtk2-2.10.3-1
-  pyorbit-2.14.1-1
-  python-2.4.3-1
+  python-2.5.1-1
+  python-gconf2-2.18.2-1
+  python-gnome2-2.18.2-1
+  python-gnomecanvas2-2.18.2-1
+  python-gnomevfs2-2.18.2-1
+  python-gobject2-2.12.3-2
+  python-gtk2-2.10.4-2
+  python-orbit-2.14.3-1
 
 Build requirements:
   cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   cygport-0.2.11-1
-  gnome-common-20070130-1
+  gnome-common-2.18.0-1
   make-3.81-1
   pkg-config-0.21-1
   scrollkeeper-0.3.14-2
@@ -31,7 +30,7 @@ Canonical homepage:
   http://gramps.sourceforge.net/
 
 Canonical download:
-  http://prdownloads.sourceforge.net/gramps/
+  http://downloads.sourceforge.net/gramps/
 
 -------------------------------------------
 
@@ -1832,6 +1831,9 @@ Files included in the binary package:
 --------------------
 
 Port Notes:
+
+----- version 2.2.8-1 -----
+Version bump, built for python-2.5.
 
 ----- version 2.2.7-1 -----
 Version bump.
