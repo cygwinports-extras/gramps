@@ -1,5 +1,5 @@
 category: Gnome
-requires: python python-gconf2 python-gnome2 python-gnomecanvas2 python-gnomevfs2 python-gtk2 python-orbit
+requires: python python-cairo python-gconf2 python-gnome2 python-gnomevfs2 python-gtk2 python-orbit
 sdesc: "GNOME genealogical program"
 ldesc: "GRAMPS is a genealogical application, the name being an acronym 
 for Genealogical Research and Analysis Management Programming System. 
