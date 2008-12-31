@@ -6,23 +6,23 @@ allows you to store, edit, and research genealogical data, with similar
 functionality to other genealogical programs.
 
 Runtime requirements:
-  python-2.5.2-3
-  python-cairo-1.4.12-1
-  python-gconf2-2.22.1-1
-  python-gnome2-2.22.1-1
-  python-gnomevfs2-2.22.1-1
-  python-gobject2-2.14.2-1
-  python-gtk2-2.12.1-1
-  python-orbit-2.14.3-1
+  python-2.5.2-4
+  python-cairo-1.8.0-1
+  python-gconf2-2.22.3-1
+  python-gnome2-2.22.3-1
+  python-gnomevfs2-2.22.3-1
+  python-gobject2-2.15.4-1
+  python-gtk2-2.13.0-1
+  python-orbit-2.24.0-1
 
 Build requirements:
   cygwin-1.5.25-15
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  cygport-0.4.0-1
-  gnome-common-2.20.0-2
-  gnome-doc-utils-0.12.2-1
-  intltool-0.40.3-1
+  autoconf2.5-2.63-1
+  automake1.9-1.9.6-3
+  cygport-0.4.3-1
+  gnome-common-2.24.0-1
+  gnome-doc-utils-0.14.0-1
+  intltool-0.40.5-1
   make-3.81-1
   pkg-config-0.23a-2
   rarian-0.8.1-1
@@ -37,15 +37,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gramps-3.0.2-1-src.tar.bz2
+  unpack gramps-3.0.4-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gramps-3.0.2-1.cygport all
+  cygport ./gramps-3.0.4-1.cygport all
 
 This will create:
-  /usr/src/gramps-3.0.2-1-src.tar.bz2
-  /usr/src/gramps-3.0.2-1.tar.bz2
+  /usr/src/gramps-3.0.4-1-src.tar.bz2
+  /usr/src/gramps-3.0.4-1.tar.bz2
 
 -------------------------------------------
 
@@ -55,14 +55,14 @@ Files included in the binary package:
   /usr/bin/gramps
   /usr/share/application-registry/gramps.applications
   /usr/share/applications/gramps.desktop
-  /usr/share/doc/gramps-3.0.2/AUTHORS
-  /usr/share/doc/gramps-3.0.2/COPYING
-  /usr/share/doc/gramps-3.0.2/ChangeLog
-  /usr/share/doc/gramps-3.0.2/FAQ
-  /usr/share/doc/gramps-3.0.2/INSTALL
-  /usr/share/doc/gramps-3.0.2/NEWS
-  /usr/share/doc/gramps-3.0.2/README
-  /usr/share/doc/gramps-3.0.2/TODO
+  /usr/share/doc/gramps-3.0.4/AUTHORS
+  /usr/share/doc/gramps-3.0.4/COPYING
+  /usr/share/doc/gramps-3.0.4/ChangeLog
+  /usr/share/doc/gramps-3.0.4/FAQ
+  /usr/share/doc/gramps-3.0.4/INSTALL
+  /usr/share/doc/gramps-3.0.4/NEWS
+  /usr/share/doc/gramps-3.0.4/README
+  /usr/share/doc/gramps-3.0.4/TODO
   /usr/share/gramps/ArgHandler.py
   /usr/share/gramps/ArgHandler.pyc
   /usr/share/gramps/ArgHandler.pyo
@@ -2174,6 +2174,9 @@ Files included in the binary package:
 --------------------
 
 Port Notes:
+
+----- version 3.0.4-1 -----
+Version bump.
 
 ----- version 3.0.2-1 -----
 Version bump.
