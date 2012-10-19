@@ -1,7 +1,0 @@
-category: Utils
-requires: graphviz python python-cairo python-gconf2 python-gnomevfs2 python-gtk2.0 python-gtkspell python-webkit shared-mime-info
-sdesc: "GNOME genealogical program"
-ldesc: "GRAMPS is a genealogical application, the name being an acronym 
-for Genealogical Research and Analysis Management Programming System. 
-It allows you to store, edit, and research genealogical data, with 
-similar functionality to other genealogical programs."

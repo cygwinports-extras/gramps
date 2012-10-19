@@ -1,0 +1,19 @@
+inherit gnome2 python
+
+NAME="gramps"
+VERSION=3.4.1
+RELEASE=1
+CATEGORY="Gnome"
+SUMMARY="GNOME genealogical program"
+DESCRIPTION="GRAMPS is a genealogical application, the name being an acronym
+for Genealogical Research and Analysis Management Programming System. It
+allows you to store, edit, and research genealogical data, with similar
+functionality to other genealogical programs."
+HOMEPAGE="http://www.gramps-project.org/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
+REQUIRES="graphviz rcs"
+
+DIFF_EXCLUDES="const.py"
+
+CYGCONF_ARGS="--enable-packager-mode"

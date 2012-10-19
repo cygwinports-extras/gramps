@@ -1,9 +1,0 @@
-inherit gnome2
-
-DESCRIPTION="GNOME genealogical program"
-HOMEPAGE="http://www.gramps-project.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-
-DIFF_EXCLUDES="const.py"
-
-CYGCONF_ARGS="--enable-packager-mode"
