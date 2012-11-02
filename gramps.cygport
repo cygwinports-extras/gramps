@@ -1,7 +1,7 @@
 inherit gnome2 python
 
 NAME="gramps"
-VERSION=3.4.1
+VERSION=3.4.2
 RELEASE=1
 CATEGORY="Gnome"
 SUMMARY="GNOME genealogical program"
