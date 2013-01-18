@@ -2,7 +2,7 @@ inherit gnome2 python
 
 NAME="gramps"
 VERSION=3.4.2
-RELEASE=1
+RELEASE=2
 CATEGORY="Gnome"
 SUMMARY="GNOME genealogical program"
 DESCRIPTION="GRAMPS is a genealogical application, the name being an acronym
